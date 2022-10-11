@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8" name="viewport" content='width=device-width, initial-scale=1.0'>
+<title>Avez Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button onclick="topFunction()" id="myBtn" ><img src="images/top.png"></button>
+
+<section class="footer">
+    <nav>
+        <a href="index.html"><img src="images/logo.png" alt="Avez"></a>
+        <div class="nav-links" id="navLinks">
+            <img class="fa fa-times" onclick="hideMenu()" src="images/close.png">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Avez_Shariq_Data_Analyst.pdf">Resume</a></li>
+            </ul>
+        </div>
+        <img class="fa fa-bars" onclick="showMenu()" src="images/menu.png">
+    </nav>
+</section>
+
+
+<section class="projects">
+    <img src="projects/telecom_churn.png">
+    <div class="projects-text">
+        <h1><a  href="https://github.com/avezshariq/DataScience/blob/db1d8f47085db255b867d220663b5c506f1444ad/logistic_regression/README.md" target="_blank">Telecom Churn Case Study</a></h1>
+        <p>The case study was regarding customer churn prediction in Telecom industry. There are 7000+ entries and 20+ parameters. The data includes a column to show whether the customer has churned or not. Based on this, a model needs to be created to predict the churn probability of a given customer. Data cleanup was performed. This involved checking outliers, converting text entries to numeric etc.. Simple Exploratory Data Analysis (EDA) was performed. A suitable model was built after splitting the data into test and train datasets. Feature elimination was performed using RFE and VIF in multiple iterations. Once we reached satisfactory results on train case, then the model was applied to the test case. Eventually,<br> Accuracy=73.54%, Sensitivity=74.2%, Specificity=73.3% <br>results were achieved </p>
+    </div>
+</section>
+
+<section class="projects">
+    <img src="projects/crm.png">
+    <div class="projects-text">
+        <h1><a  href="https://github.com/avezshariq/crm/blob/3143fcfd73857f97400a0873eab224c343b41eed/README.md" target="_blank">CRM Software</a></h1>
+        <p>For this project, Python-Tkinter library was used. This library is used to make GUIs. This app consists of basic fields like text-entry, spin-box, buttons, drop-down menu, check-box. It has the facility to search, add and delete entries. It also displays suitable warnings and error messages in case of incorrect information. The backend of ETL is done using Python-Pandas library as it can handle more advanced tasks than using simple fopen and fclose commands</p>
+    </div>
+</section>
+
+<section class="projects">
+    <img src="projects/treasure_hunt.png">
+    <div class="projects-text">
+        <h1><a  href="https://github.com/avezshariq/treasure_hunt/blob/4e95b4861326347d7d26f87e1098bb91f6542bcc/README.md" target="_blank">Treasure Hunt Game</a></h1>
+        <p>For this project, Python-Pygame library was used. The game starts with a simple splash which goes away when clicked. In the game, the user should click on a grid box of the imaginary map. The map elements and the treasure location are completeley randomised each time the user runs the game. Each time the user clicks, a dig operation is performed which costs the user $10. Then the proximity sensor updates itself using Pythogorean thoerem indicating how close we are to the treasure. Then the user needs to dig somewhere else. The end goal is to find the treasure with the least amount of digs</p>
+    </div>
+</section>
+
+<section class="projects">
+    <img src="projects/we_all_fall_down.png">
+    <div class="projects-text">
+        <h1><a  href="https://github.com/avezshariq/weAllFallDown/blob/e7bd9f06fb9bf2e25c0dac8c7cc656c1a9b43e37/README.md" target="_blank">We All Fall Down Game</a></h1>
+        <p>This is a simple scroll game made in HTML+CSS+Vanilla JS. The rectangular blocks keep going up. There are randomised breaks in the rectangular blocks. A ball needs to fall down through them and avoid touching the top boundary of the screen, for as long as possible. The ball can also cross the left boundary and emerge from the right boundary and vice versa. This gives the player strategic advantage sometimes.</p>
+    </div>
+</section>
+
+<section class="projects">
+    <img src="projects/guess_game.png">
+    <div class="projects-text">
+        <h1><a  href="https://github.com/avezshariq/guess-game/blob/fb6835998683856e362a9f08f349fa3e63570b7d/README.md" target="_blank">Guess Game</a></h1>
+        <p>A simple guess the country game made in Python-PyGame. The user has to enter alphabet. Then the computer displays the alphabet if it is correct. If the alphabet is correct, the user does not lose a chance. Otherwise, the user loses a chance. A maximum of 8 chances are given per gameplay. For the sake of simplicity, only country names that do not have spaces in between were selected</p>
+    </div>
+</section>
+
+<section class="projects">
+    <img src="projects/flap.png">
+    <div class="projects-text">
+        <h1><a  href="https://github.com/avezshariq/flappy-bird-simple/blob/c003ec099e75a5eaea41d9f25bafeb31e20fc983/README.md" target="_blank">Flappy Bird Game</a></h1>
+        <p>A version of the classic Flappy Bird Game made in Python-PyGame. The game consists of 3 loops. The first one is a splash screen which features a simple animation. This disappears when space bar is clicked and starts the game. The bird goes down due to gravity action and when the space bar is pressed the bird makes a brief jump. This is an infinte game (there is no end goal) which could be played as long as possible.</p>
+    </div>
+</section>
+
+<section class="footer">
+    <h2>Connect with me at <a href="mailto:avezshariq@gmail.com">avezshariq@gmail.com</a></h2>
+    <p>You can only get a rough idea about what I am from this website. Feel free to contact me and you shall find that I am an even better person
+    <br>
+    You can find me here as well :
+    <div class="social">
+        <h3><a href="https://www.linkedin.com/in/avezshariq/" target="_blank">Linkedin</a></h3>
+        <h3><a href="https://github.com/avezshariq" target="_blank">GitHub</a></h3>
+        <h3><a href="https://medium.com/@avezshariq" target="_blank">Medium</a></h3>
+    </div>
+    
+    <p style="font-size: 10px; line-height: 15px;">Avez Shariq loves FOSS. He also loves sharing resources if it is beneficial to others. If you want to reuse any part of this website, just ask 👍🏻</p>
+</section>
+
+</body>
+<script src="script.js"></script>
+</html>
