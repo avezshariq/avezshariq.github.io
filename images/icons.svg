@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933333 16.933333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="icons.svg"
+   inkscape:export-filename="top.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="8.0026076"
+     inkscape:cx="85.971977"
+     inkscape:cy="121.64785"
+     inkscape:window-width="1920"
+     inkscape:window-height="989"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1631"
+       transform="matrix(0.1575563,0,0,0.1556277,11.639399,-12.920442)"
+       inkscape:export-filename="menu.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       style="fill:#ffffff">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2"
+         id="rect788"
+         width="107.47481"
+         height="29.213331"
+         x="51.262596"
+         y="90.540016"
+         ry="8.990983" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2"
+         id="rect898"
+         width="107.47481"
+         height="29.213331"
+         x="51.262596"
+         y="130.33669"
+         ry="8.990983" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2"
+         id="rect900"
+         width="107.47481"
+         height="29.213331"
+         x="51.262596"
+         y="170.13336"
+         ry="8.990983" />
+    </g>
+    <g
+       id="g2406"
+       transform="matrix(0.85332183,0.85332183,-0.85332183,0.85332183,9.068965,11.648314)"
+       inkscape:export-filename="close.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       style="fill:#ffffff">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.313178"
+         id="rect2391"
+         width="16.933332"
+         height="4.5464034"
+         x="4.4504802e-07"
+         y="6.1934648"
+         ry="1.399246" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.313178"
+         id="rect2402"
+         width="16.933332"
+         height="4.5464034"
+         x="2.3841858e-07"
+         y="-10.739868"
+         ry="1.399246"
+         transform="rotate(90)" />
+    </g>
+    <g
+       id="g323"
+       inkscape:export-filename="top.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.377937"
+         id="rect294"
+         width="20.434795"
+         height="5.4865055"
+         x="23.319199"
+         y="-32.821087"
+         ry="1.6885811"
+         transform="rotate(90)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.267242"
+         id="rect302"
+         width="10.217398"
+         height="5.4865055"
+         x="-4.1582928"
+         y="-41.607426"
+         ry="1.6885811"
+         transform="rotate(135)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.267242"
+         id="rect304"
+         width="10.217398"
+         height="5.4865055"
+         x="38.115822"
+         y="0.66668522"
+         ry="1.6885811"
+         transform="matrix(0.70710678,0.70710678,0.70710678,-0.70710678,0,0)" />
+    </g>
+  </g>
+</svg>
