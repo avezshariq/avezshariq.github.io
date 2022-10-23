@@ -4,13 +4,12 @@
     --yellow: #f0b10a;
     --gold: #e5cb84;
     --yellow_dark: #574102;
-    --blue: #3647ca;
-    --red: #c83b3b;
+    --blue: #1e1e79;
+    --light_blue: #4f4fcb;
     --white: #ffffff;
     --button_top: rgba(0,0,0,0.9);
     --button_bottom: rgba(0,0,0,0.2);
     --button_middle: rgba(0,0,0,0.5);
-    --alternate-background: #191945;
 }
 
 * {
@@ -39,6 +38,7 @@ button img {
 }
 button:hover {
     background-color: var(--blue);
+    border-color: var(--light_blue);
     box-shadow: 0 0 20px 0px black;
 }
 .emoji {
@@ -117,9 +117,8 @@ nav img {
     position: relative;
 }
 .hero-btn:hover {
-    border: 3px solid var(--gold);
-    background-color: var(--yellow_dark);
-    color: var(--gold);
+    border: 3px solid var(--light_blue);
+    background-color: var(--blue);
     transition: 0.2s;
 }
 nav .fa {
@@ -319,6 +318,23 @@ nav .fa {
     margin-bottom: 15 px;
     text-align: center;
 }
+.education-col1 {
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.education-col1 img {
+    left: 20%;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0 0 20px black;
+}
+.education-col1 h3 {
+    margin-top: 16px;
+    margin-bottom: 15 px;
+    text-align: center;
+}
 .footer {
     background-image: linear-gradient(var(--button_bottom), var(--button_top)), url(images/earth1.jpg);
     width: 100%;
@@ -370,13 +386,20 @@ nav .fa {
 .projects a {
     padding: 15px;
     text-decoration: none;
-    color: black;
+    color: white;
+    line-height: 2;
+    background-color: var(--light_blue);
+    border-radius: 15px;
+    animation: heading_anim 6s infinite;
     transition: 0.2s;
 }
+@keyframes heading_anim {
+    0% {background-color: var(--blue);}
+    50% {background-color: var(--yellow_dark);}
+    100% {background-color: var(--blue);}
+}
 .projects a:hover {
-    border-radius: 15px;
-    background-color: var(--gold);
-    /* box-shadow: 0 0 20px black; */
+    border-radius: 50px;
 }
 
 
@@ -434,6 +457,9 @@ nav .fa {
     }
     .projects img {
         width: 80%;
+    }
+    .education-col1 img {
+        width: 100%;
     }
 }
 
