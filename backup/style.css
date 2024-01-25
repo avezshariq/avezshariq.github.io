@@ -1,0 +1,11 @@
+nav {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem 1rem 1rem;
+}
+.header-logo img {
+    width: 20rem;
+    height: auto;
+}
