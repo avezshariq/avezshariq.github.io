@@ -14,12 +14,11 @@ nav {
 }
 
 .header a{
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     font-size: 1.25rem;
     border-radius: 0.5rem;
-    box-shadow: #41b392 0 0 1rem;
-    border-color: #41b392;
+    box-shadow: #70e9c781 0 0 1rem;
     border: 0.2rem solid #70e9c7;
     color: white;
     text-decoration: none;
@@ -28,4 +27,10 @@ nav {
     color: #313131;
     background-color: #70e9c7;
     transition: 0.15s ease-in-out;
+    box-shadow: #70e9c7 0 0 1.5rem;
+
 }
+
+
+
+
