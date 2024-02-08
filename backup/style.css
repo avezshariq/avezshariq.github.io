@@ -89,6 +89,7 @@ a {
     border: 0.3rem solid #313131;
 }
 
+
 /* Skills */
 .skills-section {
     text-align: right;
@@ -104,7 +105,7 @@ a {
     text-align: center;
 }
 .skill h2 {
-    background-color: #202020;
+    /* background-color: #202020; */
     border-radius: 1rem;
     padding: 0.3rem 0;
 }
@@ -112,4 +113,36 @@ a {
     width: 10vw;
     border-radius:  1rem;
     border: 0.3rem solid #313131;
+}
+
+/* Miscellaneous */
+.misc {
+    padding: 1rem;
+    text-align: center;
+}
+.misc h2 {
+    /* background-color: #313131; */
+    border-radius: 1rem;
+    padding: 0.3rem 0;
+}
+.misc img {
+    width: 20vw;
+    border-radius:  1rem;
+    border: 0.3rem solid #313131;
+}
+.misc p{
+    width: 20vw;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+footer p {
+    font-size: 0.7rem;
+}
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20rem;
 }
