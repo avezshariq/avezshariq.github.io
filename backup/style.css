@@ -135,6 +135,34 @@ a {
     width: 20vw;
 }
 
+/* About */
+.about {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #313131;
+    margin: 1rem;
+    border-radius: 2rem;
+    width: 25vw;
+}
+.about h2 {
+    border-radius: 1rem;
+    padding: 0.3rem 0;
+    width: 20vw;
+}
+.about img {
+    width: 100%;
+    height: auto;
+    border-radius:  1rem;
+    border: 0.3rem solid #313131;
+}
+.about p{
+    width: 20vw;
+}
+
 /* Footer */
 footer {
     text-align: center;
