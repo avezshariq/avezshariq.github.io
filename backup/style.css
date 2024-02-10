@@ -163,6 +163,41 @@ a {
     width: 20vw;
 }
 
+/* Projects */
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+.project {
+    border: 0.3rem solid #202020;
+    display: flex;
+    margin: 1rem;
+    background-color: #313131;
+    border-radius: 1rem;
+}
+.project:hover {
+    border: 0.3rem solid #70e9c7;
+    transition: 0.15s ease-in-out;
+}
+.project img {
+    height: 15rem;
+    margin: 1rem;
+}
+.project-text {
+    margin: 0.5rem 2rem;
+}
+.project a{
+    color: #70e9c7;
+    padding: 1rem 1rem 1rem 0.5rem;
+    border-radius: 1rem;
+
+}
+.project:hover a {
+    background-color: #70e9c7;
+    color: #202020;
+    transition: 0.15s ease-in-out;
+}
+
 /* Footer */
 footer {
     text-align: center;
