@@ -178,16 +178,19 @@ a {
 .project:hover {
     border: 0.3rem solid #70e9c7;
     transition: 0.15s ease-in-out;
+    background-color: #18352d;
 }
 .project img {
     height: 15rem;
     margin: 1rem;
+    border-radius: 1rem;
 }
 .project-text {
     margin: 0.5rem 2rem;
 }
-.project a{
-    color: #70e9c7;
+.project{
+    color: white;
+    text-decoration: none;
     padding: 1rem 1rem 1rem 0.5rem;
     border-radius: 1rem;
 
