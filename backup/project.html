@@ -93,14 +93,27 @@
 
     <div class="highlights">
         <h1>Ain't nothing better than getting hands dirty</h1>
-        <p>Projects be a real life teacher <a href="#">my projects</a>
+        <p>Projects are real life teachers. They teach you many things like quirky workarounds, persistance, dedication etc... Of course all of this comes in tiny steps and silly mistakes which I have done over the last couple of years.  This is not possible without a strong foundation in logic and understanding of core concepts. Check out where I got that from, and know more <a href="about.html">about my credentials</a>
         </p>
         <div class="projects">
             <a class="project" href="https://github.com/avezshariq/json_visualizer">
                 <img src="assets/json_visualizer.png">
                 <div class="project-text">
                     <h2>JSON Visualizer</h2>
-                    <p>Pending</p>
+                    <p>Opening a JSON file and getting an understanding of its structure can be pretty daunting sometimes, especially if it involves a huge amount of data. This program helps visualise the tree of the JSON file. It can be used to get some useful information like:
+                        <ol>
+                            <li>Structure of the JSON file</li>
+                            <li>Number of levels or depth of the file</li>
+                            <li>Where the metadata is and where the actual data is</li>
+                            <li>Pictorial representation which is easier to understand</li>
+                        </ol>
+                        <h3>Steps</h3>
+                        <ol>
+                            <li>Reads the JSON file</li>
+                            <li>Gets all useful information such as levels, names etc..</li>
+                            <li>Creates an SVG file (Vector Image file)</li>
+                        </ol>
+                    </p>
                 </div>
             </a>
 
@@ -116,7 +129,8 @@
                 <img src="assets/lichess.png">
                 <div class="project-text">
                     <h2>Lichess Dataset</h2>
-                    <p>Pending</p>
+                    <p>This dataset was taken from kaggle. It has a lot of useful columns like who won the game, time taken, number of moves, opening type etc...</br></br>
+                    Exploratory Data analysis was done on the dataset and visualisation was done in seaborn. Created appropriate columns like the game format (classified the game as Bullet, Rapid, Classical) and performed analysis based on that</p>
                 </div>
             </a>
 
@@ -132,7 +146,7 @@
                 <img src="assets/treasure_hunt.png">
                 <div class="project-text">
                     <h2>Treasure Hunt</h2>
-                    <p>The case study was regarding customer churn prediction in Telecom industry. There are 7000+ entries and 20+ parameters. The data includes a column to show whether the customer has churned or not. Based on this, a model needs to be created to predict the churn probability of a given customer. Data cleanup was performed. This involved checking outliers, converting text entries to numeric etc.. Simple Exploratory Data Analysis (EDA) was performed. A suitable model was built after splitting the data into test and train datasets. Feature elimination was performed using RFE and VIF in multiple iterations. Once we reached satisfactory results on train case, then the model was applied to the test case. Eventually the results that were achieved are:<br/><strong>Accuracy=73.54%, Sensitivity=74.2%, Specificity=73.3%</strong> </p>
+                    <p>For this project, Python-Pygame library was used. The game starts with a simple splash which goes away when clicked. In the game, the user should click on a grid box of the imaginary map. The map elements and the treasure location are completeley randomised each time the user runs the game. Each time the user clicks, a dig operation is performed which costs the user $10. Then the proximity sensor updates itself using Pythogorean thoerem indicating how close we are to the treasure. Then the user needs to dig somewhere else. The end goal is to find the treasure with the least amount of digs</p>
                 </div>
             </a>
 
@@ -140,7 +154,7 @@
                 <img src="assets/we_all_fall_down.png">
                 <div class="project-text">
                     <h2>We all fall down</h2>
-                    <p>The case study was regarding customer churn prediction in Telecom industry. There are 7000+ entries and 20+ parameters. The data includes a column to show whether the customer has churned or not. Based on this, a model needs to be created to predict the churn probability of a given customer. Data cleanup was performed. This involved checking outliers, converting text entries to numeric etc.. Simple Exploratory Data Analysis (EDA) was performed. A suitable model was built after splitting the data into test and train datasets. Feature elimination was performed using RFE and VIF in multiple iterations. Once we reached satisfactory results on train case, then the model was applied to the test case. Eventually the results that were achieved are:<br/><strong>Accuracy=73.54%, Sensitivity=74.2%, Specificity=73.3%</strong> </p>
+                    <p>This is a simple scroll game made in HTML+CSS+Vanilla JS. The rectangular blocks keep going up. There are randomised breaks in the rectangular blocks. A ball needs to fall down through them and avoid touching the top boundary of the screen, for as long as possible. The ball can also cross the left boundary and emerge from the right boundary and vice versa. This gives the player strategic advantage sometimes.</p>
                 </div>
             </a>
 
@@ -148,7 +162,7 @@
                 <img src="assets/guess_game.png">
                 <div class="project-text">
                     <h2>Guess the Country</h2>
-                    <p>The case study was regarding customer churn prediction in Telecom industry. There are 7000+ entries and 20+ parameters. The data includes a column to show whether the customer has churned or not. Based on this, a model needs to be created to predict the churn probability of a given customer. Data cleanup was performed. This involved checking outliers, converting text entries to numeric etc.. Simple Exploratory Data Analysis (EDA) was performed. A suitable model was built after splitting the data into test and train datasets. Feature elimination was performed using RFE and VIF in multiple iterations. Once we reached satisfactory results on train case, then the model was applied to the test case. Eventually the results that were achieved are:<br/><strong>Accuracy=73.54%, Sensitivity=74.2%, Specificity=73.3%</strong> </p>
+                    <p>A simple guess the country game made in Python-PyGame. The user has to enter alphabet. Then the computer displays the alphabet if it is correct. If the alphabet is correct, the user does not lose a chance. Otherwise, the user loses a chance. A maximum of 8 chances are given per gameplay. For the sake of simplicity, only country names that do not have spaces in between were selected</p>
                 </div>
             </a>
 
@@ -156,7 +170,7 @@
                 <img src="assets/flap.png">
                 <div class="project-text">
                     <h2>Flappy Bird</h2>
-                    <p>The case study was regarding customer churn prediction in Telecom industry. There are 7000+ entries and 20+ parameters. The data includes a column to show whether the customer has churned or not. Based on this, a model needs to be created to predict the churn probability of a given customer. Data cleanup was performed. This involved checking outliers, converting text entries to numeric etc.. Simple Exploratory Data Analysis (EDA) was performed. A suitable model was built after splitting the data into test and train datasets. Feature elimination was performed using RFE and VIF in multiple iterations. Once we reached satisfactory results on train case, then the model was applied to the test case. Eventually the results that were achieved are:<br/><strong>Accuracy=73.54%, Sensitivity=74.2%, Specificity=73.3%</strong> </p>
+                    <p>A version of the classic Flappy Bird Game made in Python-PyGame. The game consists of 3 loops. The first one is a splash screen which features a simple animation. This disappears when space bar is clicked and starts the game. The bird goes down due to gravity action and when the space bar is pressed the bird makes a brief jump. This is an infinte game (there is no end goal) which could be played as long as possible.</p>
                 </div>
             </a>
         </div>
