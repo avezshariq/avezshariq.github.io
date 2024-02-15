@@ -24,7 +24,6 @@ nav {
 .header-logo {
     max-width: 25rem;
     height: auto;
-    overflow: hidden;
 }
 .header a{
     display: flex;
@@ -47,6 +46,9 @@ nav {
 .hero {
     position: relative;
 }
+.hero-mobile {
+    display: none;
+}
 .hero img {
     max-width: 70%;
     height: auto;
@@ -60,6 +62,9 @@ nav {
     right: 10%;
     width: 35rem;
     text-align: center;
+    background-color: #313131b5;
+    border-radius: 2rem;
+    backdrop-filter: blur(5px);
 }
 a {
     color: #70e9c7;
@@ -68,6 +73,7 @@ a {
 /* Highlights */
 .highlights {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     background-color: #202020;
     padding: 1rem;
@@ -96,7 +102,7 @@ a {
     padding: 0.3rem 0;
 }
 .highlights-project img {
-    width: 20vw;
+    max-width: 18rem;
     border-radius:  1rem;
     border: 0.3rem solid #313131;
 }
@@ -108,7 +114,7 @@ a {
 }
 .skills {
     display: flex;
-    overflow: auto;
+    /* overflow: auto; */
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -122,7 +128,7 @@ a {
     padding: 0.3rem 0;
 }
 .skill img {
-    width: 10vw;
+    max-width: 7rem;
     border-radius:  1rem;
     border: 0.3rem solid #202020;
     padding: 0.1rem;
@@ -132,6 +138,9 @@ a {
 .misc {
     padding: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 18rem;
 }
 .misc h2 {
     /* background-color: #313131; */
@@ -139,12 +148,11 @@ a {
     padding: 0.3rem 0;
 }
 .misc img {
-    width: 20vw;
     border-radius:  1rem;
     border: 0.3rem solid #313131;
 }
 .misc p{
-    width: 20vw;
+    width: 100%;
 }
 
 /* About */
@@ -196,7 +204,7 @@ a {
     background-color: #18352d;
 }
 .project img {
-    height: auto;
+    height: 15rem;
     width: 15rem;
     margin: 1rem;
     border-radius: 1rem;
@@ -256,5 +264,41 @@ footer p {
     .highlights-projects {
         flex-direction: column;
     }
-    
+    .header-logo svg {
+        width: 120%;
+    }  
+    /* .hero p {
+        font-size: 1rem;
+        font-weight: 700;
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        width: 15rem;
+        text-align: center;
+        background-color: #70e9c781;
+    } 
+    .hero img {
+        max-width: 80%;
+        height: auto;
+    } */
+    .hero {
+        display: none;
+    }
+    .hero-mobile {
+        display: flex;
+        background-image: url(assets/hero.png);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 5rem 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .hero-mobile p {
+        background-color: #313131b5;
+        border-radius: 2rem;
+        backdrop-filter: blur(5px);
+
+    }
 }
