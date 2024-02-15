@@ -12,14 +12,25 @@ strong {
 }
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5rem 1rem 1rem;
 }
-
+.header {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-logo {
+    max-width: 25rem;
+    height: auto;
+    overflow: hidden;
+}
 .header a{
+    display: flex;
+    flex-wrap: wrap;
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    margin: 0.5rem 0.5rem;
     font-size: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: #70e9c781 0 0 1rem;
@@ -56,13 +67,14 @@ a {
 
 /* Highlights */
 .highlights {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #202020;
     padding: 1rem;
     border-radius: 1rem;
 }
 .highlights-projects {
     display: flex;
-    overflow: auto;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -139,6 +151,7 @@ a {
 .about {
     padding: 1rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -146,21 +159,21 @@ a {
     background-color: #313131;
     margin: 1rem;
     border-radius: 2rem;
-    width: 25vw;
+    max-width: 25rem;
 }
 .about h2 {
     border-radius: 1rem;
     padding: 0.3rem 0;
-    width: 20vw;
+    width: 100%;
 }
 .about img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius:  1rem;
     border: 0.3rem solid #313131;
 }
 .about p{
-    width: 20vw;
+    width: 100%;
 }
 
 /* Projects */
@@ -169,6 +182,8 @@ a {
     flex-direction: column;
 }
 .project {
+    display: flex;
+    /* flex-wrap: wrap; */
     border: 0.3rem solid #202020;
     display: flex;
     margin: 1rem;
@@ -181,12 +196,14 @@ a {
     background-color: #18352d;
 }
 .project img {
-    height: 15rem;
+    height: auto;
+    width: 15rem;
     margin: 1rem;
     border-radius: 1rem;
 }
 .project-text {
     margin: 0.5rem 2rem;
+    flex-grow: 1;
 }
 .project{
     color: white;
@@ -210,8 +227,8 @@ footer p {
 }
 .social {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 0 20rem;
 }
 .social a{
     margin: 0 1rem;
@@ -224,4 +241,20 @@ footer p {
 }
 .social img:hover {
     border: 0.3rem solid #70e9c7;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    
+    .project {
+        flex-direction: column;
+    }
+    .highlights {
+        flex-direction: column;
+    }
+    .highlights-projects {
+        flex-direction: column;
+    }
+    
 }

@@ -19,7 +19,8 @@
 }
 
 .header-logo svg {
-    width: 25rem;
+    display: block;
+    width: 100%;
     height: auto;
     fill: none;
     stroke-width: 3;
