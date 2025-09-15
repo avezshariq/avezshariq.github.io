@@ -1,257 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 :root {
-    --bg-color: #212121;
-    --button-color: #282828;
-    --purple: #0D7377;
-    --highlight-color: #14FFEC;
+    --bg: #1a1a1a;
+    --bg-lighter: #232323;
+    --bg-light: #373737;
+    --blue: #59d3e0;
+    --blue-darker: #275d63;
+    --yellow: #f9cb40;
+    --yellow-darker: #816824;
+    --red: #cd533b;
+    --pink: #cc978e;
 }
 
-body {
-    background-color: var(--bg-color);
+
+body{
+    background-color: var(--bg);
     color: white;
     font-family: "JetBrains Mono", monospace;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.nav a{
-    margin: 0.5rem 0.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 header {
-    margin: 1rem 2rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    padding: 2vh;
 }
-
 header a {
-    padding: 0.5rem 1rem;
     text-decoration: none;
-    font-family: inherit;
-    color: inherit;
-    background-color: var(--button-color);
-    border: 0.15rem solid var(--highlight-color);
-    border-radius: 0.5rem 1rem;
-    box-shadow: 0 0 1rem var(--purple);
-    cursor: pointer;
-}
-
-#logo {
-    border: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-}
-
-header a:hover {
-    box-shadow: 0 0 1.5rem var(--highlight-color);
-    background-color: var(--highlight-color);
-    color: var(--bg-color);
-    transition: 0.2s;
-}
-
-.hero {
-    text-align: center;
-    background-image: url('assets/hero.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding: 12rem 0;
-}
-
-.hero h1 {
-    backdrop-filter: blur(1rem);
-}
-
-section {
-    background-color: var(--button-color);
-    margin: 1rem 0;
-    padding: 1rem;
-}
-
-a,
-h3,
-h1 {
-    color: var(--highlight-color);
-}
-
-em {
-    background-color: var(--purple);
     color: white;
-    padding: 0.1rem 0.6rem;
-    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.8rem;
+    background-color: var(--bg-light);
+    border: var(--bg-light) 0.2rem solid;
+    border-radius: 0.5rem 1rem;
+    transition: all 0.1s;
+}
+header a:hover {
+    border: var(--blue) 0.2rem solid;
+    color: var(--blue);
+    box-shadow: 0 0 1rem var(--blue);
 }
 
-.highlights {
+
+#hero{
+    font-family: "Fira Code", monospace;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    height: 95vh;
+    background-image: url("images/hero.png");
+    background-position: center center;
+    background-size: 90rem;
+    background-repeat: no-repeat;
+    font-size: 3rem;
+    font-weight: 700;
 }
-
-.highlights a {
-    text-decoration: none;
-    color: inherit;
+#hero p{
+    backdrop-filter: blur(1em);
+    padding: 1rem;
+    width: 30%;
+    text-align: center;
+    border-radius: 1rem 4rem;
 }
-
-.highlight-project {
-    background-color: var(--button-color);
+#art{
+    color: var(--yellow);
+    text-decoration: underline dotted var(--yellow);
+    text-decoration-thickness: 0.35rem;
+}
+#code{
+    color: var(--blue);
+    text-decoration: underline dotted var(--blue);
+    text-decoration-thickness: 0.35rem;
+}
+h1 {
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    font-size: 2rem;
+    padding-left: 2rem;
+    color: var(--blue);
+}
+.section > p{
+    padding: 0 5rem;
+}
+.section{
+    padding-left: 1rem;
+    background-color: var(--bg-lighter);
+    border-radius: 1rem;
+    padding: 0.5rem 0;
+}
+.highlight-word-blue {
+    text-decoration: underline solid var(--blue);
+    font-style: italic; 
+}
+h3 {
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    margin: 3rem 0 0 0;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-    width: 20%;
-    border-radius: 1rem 3rem;
-    border: 0.2rem solid var(--purple);
-    box-shadow: 0 0 1rem var(--purple);
-    cursor: pointer;
+    width: 20vw;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--bg);
+}
+.card > p {
+    font-size: 1rem;
+}
+.card > img {
+    height: 256px;
+    align-self: center;
+}
+.card a {
+    width: 50%;
+    align-self: center;
     text-align: center;
-    padding: 0.5rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem 0;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--blue);
+    transition: all 0.1s;
 }
-
-.highlight-project:hover {
-    border: 0.2rem solid var(--highlight-color);
-    box-shadow: 0 0 1.5rem var(--highlight-color);
-    transition: 0.2s;
+.card a:hover {
+    background-color: var(--blue);
+    color: var(--bg);
 }
-
-.highlight-project img {
-    width: 90%;
-    margin-top: 0.8rem;
-    border-radius: 1rem;
+a {
+    color: var(--blue);
+    font-style: italic;
 }
-
-.non-clickable {
-    cursor: default;
-    border: 0.2rem solid var(--highlight-color);
-    box-shadow: 0 0 1.5rem var(--purple);
-    border-radius: 1rem;
-    text-align: justify;
-}
-
-.non-clickable p a {
-    text-decoration: underline;
-    color: var(--highlight-color);
-}
-
-.non-clickable:hover {
-    border: 0.2rem solid var(--highlight-color);
-    box-shadow: 0 0 1.5rem var(--purple);
-}
-
-.skill {
-    width: 10%;
-}
-
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
-
-.connect {
+footer > div {
     display: flex;
-    background-color: var(--bg-color);
-    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+footer > div > a {
+    border-bottom: 0.1rem solid var(--bg);
+    padding: 0.2rem;
+}
+footer > div > a:hover {
+    border-bottom: 0.1rem solid var(--blue);
+}
+footer img {
+    width: 3rem;
 }
 
-.connect a {
-    margin: 0 1rem;
-    width: 6%;
-    border: 0.2rem solid var(--purple);
-    box-shadow: 0 0 1.5rem var(--purple);
-    border-radius: 0.5rem 2rem;
-    padding: 0.5rem;
-}
-
-.connect a:hover {
-    border: 0.2rem solid var(--highlight-color);
-    box-shadow: 0 0 1.5rem var(--highlight-color);
-    transition: 0.2s;
-}
-
-.connect img {
-    width: 100%;
-    border-radius: 1rem;
-}
-
-#footer-heading {
-    font-size: 1.5rem;
-    margin: 1rem 0 0 0;
-    padding: 0;
-}
-
-#footer-note {
-    font-size: 0.8rem;
-}
-
-.project-desc {
-    flex-direction: row;
-    width: 90%;
-}
-
-.project-desc img {
-    width: 30%;
-    margin: 0 2rem;
-}
-
-.description {
-    text-align: justify;
-    width: 70%;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .header-logo svg {
-        width: 100%;
-    }
-    .nav {
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .nav a {
-        box-shadow: 0 0 1.5rem var(--highlight-color);
-        background-color: var(--highlight-color);
-        color: var(--bg-color);
-    }
-    .hero {
-        padding: 2rem 0;
-    }
-    .hero h1 {
-        backdrop-filter: blur(0.5rem);
-    }
-    .highlight-project {
-        width: 90%;
-        border: 0.2rem solid var(--highlight-color);
-        box-shadow: 0 0 1.5rem var(--highlight-color);
-    }
-    .skill {
-        width: 30%;
-    }
-    .connect a {
-        width: 100%;
-        border: 0.2rem solid var(--highlight-color);
-        box-shadow: 0 0 1.5rem var(--highlight-color);
-        border-radius: 0.5rem 1.2rem;
-    }
-    .project-desc {
-        flex-direction: column;
-    }
-    .project-desc img {
-        width: 90%;
-    }
-    .description {
-        width: 100%;
-    }
-    #footer-note {
-    font-size: 0.6rem;
-    }
-}
