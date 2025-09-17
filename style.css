@@ -12,156 +12,86 @@
 }
 
 
-body{
+body {
+    font-family: 'JetBrains Mono', monospace;
     background-color: var(--bg);
-    color: white;
-    font-family: "JetBrains Mono", monospace;
-    font-weight: 400;
-    font-size: 1.1rem;
 }
 header {
     display: flex;
     justify-content: space-between;
-    padding: 2vh;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
-header a {
-    text-decoration: none;
+header > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+header a{
     color: white;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.8rem;
     background-color: var(--bg-light);
-    border: var(--bg-light) 0.2rem solid;
+    padding: 1rem;
+    text-decoration: none;
     border-radius: 0.5rem 1rem;
-    transition: all 0.1s;
-}
-header a:hover {
-    border: var(--blue) 0.2rem solid;
-    color: var(--blue);
-    box-shadow: 0 0 1rem var(--blue);
+    font-weight: 700;
 }
 
-
-#hero{
-    font-family: "Fira Code", monospace;
+#hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
-    background-image: url("images/hero.png");
-    background-position: center center;
-    background-size: 90rem;
+    height: 80vh;
+    border: 2px solid red;
+    background-image: url(images/hero.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    font-size: 3rem;
-    font-weight: 700;
+    background-position: center top;
+    animation-name: up-down;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 #hero p{
+    font-size: 2rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    color: white;
     backdrop-filter: blur(1em);
     padding: 1rem;
+    border-radius: 0.5rem 1rem;
+    text-align: center;
     width: 30%;
-    text-align: center;
-    border-radius: 1rem 4rem;
 }
-#art{
-    color: var(--yellow);
-    text-decoration: underline dotted var(--yellow);
-    text-decoration-thickness: 0.35rem;
+
+@keyframes up-down {
+    from {
+        background-position-y: 0%;
+    }
+    to {
+        background-position-y: 100%;
+    }
 }
-#code{
-    color: var(--blue);
-    text-decoration: underline dotted var(--blue);
-    text-decoration-thickness: 0.35rem;
+
+@keyframes left-right {
+    from {
+        background-position-x: 0%;
+    }
+    to {
+        background-position-x: 100%;
+    }
 }
-h1 {
-    font-family: "Fira Code", monospace;
-    font-weight: 700;
-    font-size: 2rem;
-    padding-left: 2rem;
-    color: var(--blue);
-}
-.section > p{
-    padding: 0 5rem;
-}
-.section{
-    padding-left: 1rem;
-    background-color: var(--bg-lighter);
-    border-radius: 1rem;
-    padding: 0.5rem 0;
-}
-.highlight-word-blue {
-    text-decoration: underline solid var(--blue);
-    font-style: italic; 
-}
-h3 {
-    font-family: "Fira Code", monospace;
-    font-weight: 700;
-    margin: 3rem 0 0 0;
-}
-.cards{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: var(--bg);
-}
-.card > p {
-    font-size: 1rem;
-}
-.card > img {
-    height: 15rem;
-    align-self: center;
-}
-.card a {
-    width: 50%;
-    align-self: center;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    padding: 0.8rem 0;
-    border-radius: 0.8rem;
-    border: 0.1rem solid var(--blue);
-    transition: all 0.1s;
-}
-.card a:hover {
-    background-color: var(--blue);
-    color: var(--bg);
-}
-a {
-    color: var(--blue);
-    font-style: italic;
-}
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-footer > div {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-footer > div > a {
-    border-bottom: 0.1rem solid var(--bg);
-    padding: 0.2rem;
-}
-footer > div > a:hover {
-    border-bottom: 0.1rem solid var(--blue);
-}
-footer img {
-    width: 3rem;
-    border-radius: 0.3rem;
-}
-.small-card{
-    align-items: center;
-    width: auto;
-}
-.small-card > img {
-    height: 6rem;
-    align-self: center;
+
+
+
+
+
+
+@media (max-width: 650px) {
+    #hero{
+        animation-name: left-right;
+        animation-duration: 20s;
+    }
+    #hero p{
+        width: 60%;
+    }
 }
