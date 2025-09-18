@@ -4,6 +4,7 @@
     --bg-lighter: #232323;
     --bg-light: #373737;
     --blue: #59d3e0;
+    --green: #69c982;
     --blue-darker: #275d63;
     --yellow: #f9cb40;
     --yellow-darker: #816824;
@@ -35,21 +36,19 @@ header a{
     border-radius: 0.5rem 1rem;
     font-weight: 700;
 }
-
+h1{
+    font-family: 'Fira Code', monospace;
+    color: var(--blue);
+}
 #hero {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
-    border: 2px solid red;
     background-image: url(images/hero.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    animation-name: up-down;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 #hero p{
     font-size: 2rem;
@@ -58,27 +57,56 @@ header a{
     color: white;
     backdrop-filter: blur(1em);
     padding: 1rem;
-    border-radius: 0.5rem 1rem;
+    border-radius: 0.5rem 2rem;
     text-align: center;
     width: 30%;
 }
-
-@keyframes up-down {
-    from {
-        background-position-y: 0%;
-    }
-    to {
-        background-position-y: 100%;
-    }
+#art {
+    text-decoration: underline dotted var(--yellow);
+    text-decoration-thickness: 0.3rem;
+    color: var(--yellow);
 }
-
-@keyframes left-right {
-    from {
-        background-position-x: 0%;
-    }
-    to {
-        background-position-x: 100%;
-    }
+#code {
+    text-decoration: underline dotted var(--blue);
+    text-decoration-thickness: 0.3rem;
+    color: var(--blue);
+}
+#future {
+    text-decoration: underline dotted var(--green);
+    text-decoration-thickness: 0.3rem;
+    color: var(--green);
+}
+.highlight-word {
+    text-decoration: underline solid var(--blue);
+    font-style: italic;
+}
+a {
+    color: var(--blue);
+    font-weight: 700;
+}
+.section {
+    background-color: var(--bg-lighter);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    background-color: var(--bg);
+    width: 20%;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.card img {
+    width: 100%;
 }
 
 
@@ -88,10 +116,13 @@ header a{
 
 @media (max-width: 650px) {
     #hero{
-        animation-name: left-right;
-        animation-duration: 20s;
+        background-position: left center;
+        background-position-x: 3%;
     }
     #hero p{
         width: 60%;
+    }
+    .card {
+        width: 80%;
     }
 }
