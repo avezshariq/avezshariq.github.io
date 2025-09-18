@@ -4,6 +4,7 @@
     --bg-lighter: #232323;
     --bg-light: #373737;
     --blue: #59d3e0;
+    --green: #69c982;
     --blue-darker: #275d63;
     --yellow: #f9cb40;
     --yellow-darker: #816824;
@@ -12,156 +13,197 @@
 }
 
 
-body{
+body {
+    font-family: 'JetBrains Mono', monospace;
     background-color: var(--bg);
-    color: white;
-    font-family: "JetBrains Mono", monospace;
-    font-weight: 400;
-    font-size: 1.1rem;
 }
 header {
     display: flex;
     justify-content: space-between;
-    padding: 2vh;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
-header a {
-    text-decoration: none;
+header > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+header a{
     color: white;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.8rem;
     background-color: var(--bg-light);
-    border: var(--bg-light) 0.2rem solid;
+    padding: 1rem;
+    text-decoration: none;
     border-radius: 0.5rem 1rem;
-    transition: all 0.1s;
+    font-weight: 700;
+    border: var(--bg-light) 0.2rem solid;
 }
-header a:hover {
+header a:hover{
     border: var(--blue) 0.2rem solid;
     color: var(--blue);
     box-shadow: 0 0 1rem var(--blue);
 }
-
-
-#hero{
-    font-family: "Fira Code", monospace;
+h1{
+    font-family: 'Fira Code', monospace;
+    color: var(--blue);
+}
+#hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
-    background-image: url("images/hero.png");
-    background-position: center center;
-    background-size: 90rem;
+    height: 80vh;
+    background-image: url(images/hero.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    font-size: 3rem;
-    font-weight: 700;
+    background-position: center top;
 }
 #hero p{
+    font-size: 2rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    color: white;
     backdrop-filter: blur(1em);
     padding: 1rem;
-    width: 30%;
+    border-radius: 0.5rem 2rem;
     text-align: center;
-    border-radius: 1rem 4rem;
+    width: 30%;
 }
-#art{
-    color: var(--yellow);
+#art {
     text-decoration: underline dotted var(--yellow);
-    text-decoration-thickness: 0.35rem;
+    text-decoration-thickness: 0.3rem;
+    color: var(--yellow);
 }
-#code{
-    color: var(--blue);
+#code {
     text-decoration: underline dotted var(--blue);
-    text-decoration-thickness: 0.35rem;
-}
-h1 {
-    font-family: "Fira Code", monospace;
-    font-weight: 700;
-    font-size: 2rem;
-    padding-left: 2rem;
+    text-decoration-thickness: 0.3rem;
     color: var(--blue);
 }
-.section > p{
-    padding: 0 5rem;
+#future {
+    text-decoration: underline dotted var(--green);
+    text-decoration-thickness: 0.3rem;
+    color: var(--green);
 }
-.section{
-    padding-left: 1rem;
-    background-color: var(--bg-lighter);
-    border-radius: 1rem;
-    padding: 0.5rem 0;
-}
-.highlight-word-blue {
+.highlight-word {
     text-decoration: underline solid var(--blue);
-    font-style: italic; 
+    font-style: italic;
 }
-h3 {
-    font-family: "Fira Code", monospace;
+a {
+    color: var(--blue);
     font-weight: 700;
-    margin: 3rem 0 0 0;
 }
-.cards{
+.section {
+    background-color: var(--bg-lighter);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.cards {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
     gap: 1rem;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    background-color: var(--bg);
+    width: 25%;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.card img {
+    width: 100%;
+}
+.card-skill {
+    width: 10%;
+    align-items: center;
+}
+footer {
+    color: white;
+    text-align: center;
+}
+.cards > a {
+    width: 3.5rem;
+}
+.spread {
+    gap: 2rem;
+}
+.cards > a > img {
+    width: 100%;
+    border-radius: 0.3rem;
 }
 .card {
     display: flex;
     flex-direction: column;
-    width: 20vw;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: var(--bg);
-}
-.card > p {
-    font-size: 1rem;
-}
-.card > img {
-    height: 15rem;
-    align-self: center;
+    justify-content: space-between;
 }
 .card a {
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem 1rem;
+    border: 0.1rem solid var(--blue);
     width: 50%;
     align-self: center;
-    text-align: center;
-    text-decoration: none;
     color: white;
-    padding: 0.8rem 0;
-    border-radius: 0.8rem;
-    border: 0.1rem solid var(--blue);
-    transition: all 0.1s;
 }
 .card a:hover {
     background-color: var(--blue);
     color: var(--bg);
 }
-a {
-    color: var(--blue);
+a{
     font-style: italic;
 }
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+footer a {
+    border-bottom: 0.2rem solid var(--bg);
 }
-footer > div {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+footer a:hover {
+    border-bottom: 0.2rem solid var(--blue);
 }
-footer > div > a {
-    border-bottom: 0.1rem solid var(--bg);
-    padding: 0.2rem;
+
+
+
+/* Mobile Screens */
+@media (max-width: 650px) {
+    #hero{
+        background-position: left center;
+        background-position-x: 3%;
+    }
+    #hero p{
+        width: 60%;
+    }
+    .card {
+        width: 80%;
+    }
+    .card-skill {
+        width: 30%;
+        align-items: center;
+    }
 }
-footer > div > a:hover {
-    border-bottom: 0.1rem solid var(--blue);
-}
-footer img {
-    width: 3rem;
-    border-radius: 0.3rem;
-}
-.small-card{
-    align-items: center;
-    width: auto;
-}
-.small-card > img {
-    height: 6rem;
-    align-self: center;
+
+/* Laptop Screens */
+@media (min-width: 1280px) {
+    header a {
+        font-size: 1.1rem;
+    }
+    #hero {
+        height: 90vh;
+    }
+    #hero p {
+        width: 25%;
+        font-size: 3rem;
+    }
+    .section {
+        padding: 1rem 2rem;
+    }
+    .card {
+        width: 20%;
+    }
+    .card-skill {
+        width: 10%;
+    }
+    .card a{
+        padding: 1rem 0.5rem;
+        font-size: 1.1rem;
+    }
 }
