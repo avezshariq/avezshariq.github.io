@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+#left img {
+    height: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+nav li {
+    cursor: pointer;
+}
