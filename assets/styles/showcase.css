@@ -32,6 +32,8 @@
             rgba(255, 255, 255, 0.01) 75%);
 }
 
+
+
 .card ul {
     display: flex;
     justify-content: space-evenly;
@@ -41,9 +43,10 @@
 }
 
 .card ul li {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     background-color: rgba(var(--accent-rgb), 0.1);
     border-radius: 10rem;
+    font-size: 0.8rem;
 }
 
 
