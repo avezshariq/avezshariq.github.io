@@ -13,12 +13,18 @@
 
 <body>
     <nav>
-        <div id="left"><a href="./index.html"><img src="./assets/icons/logo.svg" alt="Logo"></a>
-        </div>
+        <ul class="side-bar">
+            <li class="btn" onclick=hideSidebar()><img src="assets/icons/close.svg" alt="Logo"></li>
+            <li class="btn"><a href="./about.html"></a>About</li>
+            <li class="btn"><a href="./index.html"></a>Blog</li>
+            <li class="btn"><a href="assets/images/AvezShariq202601.pdf"></a>Resume</li>
+        </ul>
         <ul>
-            <li class="btn"><a href="./about.html">About</a></li>
-            <li class="btn"><a href="./projects.html">Projects</a></li>
-            <li class="btn"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
+            <li class="btn"><a href="./index.html"><img src="assets/icons/logo.svg" alt="Logo"></a></li>
+            <li class="btn hide-on-mobile"><a href="./about.html"></a>About</li>
+            <li class="btn hide-on-mobile"><a href="./index.html"></a>Blog</li>
+            <li class="btn hide-on-mobile"><a href="assets/images/AvezShariq202601.pdf"></a>Resume</li>
+            <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
         </ul>
     </nav>
 
@@ -153,6 +159,18 @@
         [Pandas > Excel] - [Freedom > Features] - [Math > Pixels]
         </p>
     </div>
+
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "flex"
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "none"
+        }
+    </script>
 
 </body>
 
