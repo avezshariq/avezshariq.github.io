@@ -79,7 +79,9 @@ a.btn {
     text-align: center;
 }
 
-
+li {
+    text-decoration: none;
+}
 
 a:hover {
     color: inherit;
