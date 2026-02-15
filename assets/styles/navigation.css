@@ -24,6 +24,10 @@ nav img {
 
 nav a {
     height: 100%;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
 }
 
 nav li:first-child {
@@ -53,7 +57,7 @@ nav li:first-child {
     display: none;
 }
 
-@media(max-width: 400px) {
+@media(max-width: 1024px) {
     .btn.hide-on-mobile {
         display: none;
     }
