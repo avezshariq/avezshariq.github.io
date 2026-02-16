@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Limelight&family=Orbitron:wght@400..900&display=swap');
 
 :root {
     --accent-rgb: 0, 229, 255;
     --bg-rgb: 10, 16, 26;
-    /* --warning-100: rgba(255, 183, 3, 1);
-    --error-100: rgba(255, 77, 109, 1);
-    --info-100: rgba(76, 201, 240, 1); */
 }
 
 
@@ -85,4 +82,14 @@ li {
 
 a:hover {
     color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+em {
+    font-weight: 700;
+    color: rgb(var(--accent-rgb))
 }

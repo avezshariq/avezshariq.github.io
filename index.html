@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avez Portfolio</title>
+    <title>Avez | Portfolio</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/navigation.css">
     <link rel="stylesheet" href="assets/styles/hero.css">
     <link rel="stylesheet" href="assets/styles/showcase.css">
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
 </head>
 
 <body>
@@ -16,12 +17,14 @@
         <ul class="side-bar">
             <li class="btn" onclick=hideSidebar()><img src="assets/icons/close.svg" alt="Logo"></li>
             <li class="btn"><a href="./about.html">About</a></li>
+            <li class="btn"><a href="./blog_home.html">Blog</a></li>
             <li class="btn"><a href="./projects.html">Projects</a></li>
             <li class="btn"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
         </ul>
         <ul>
             <li class="btn"><a href="./index.html"><img src="assets/icons/logo.svg" alt="Logo"></a></li>
             <li class="btn hide-on-mobile"><a href="./about.html">About</a></li>
+            <li class="btn hide-on-mobile"><a href="./blog_home.html">Blog</a></li>
             <li class="btn hide-on-mobile"><a href="./projects.html">Projects</a></li>
             <li class="btn hide-on-mobile"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
             <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
@@ -35,7 +38,7 @@
             <img src="assets/images/hero_neural.svg" alt="Neural">
         </div>
         <div id="blur">
-            <h1>Merging <br/><span><span id="code">Code</span>&<span id="art">Art</span></span><br/> to create Future Technology</h1>
+            <h1>Merging <br/><span id="code">Code</span> & <span id="art">Art</span><br/> to create Future Technology</h1>
         </div>
     </div>
 
@@ -44,11 +47,11 @@
 
     <div id="showcase">
         <h1>Projects Showcase</h1>
-        <p>My work is a direct reflection of my commitment to being a polymath in my field. While my main focus might be in my silly cubicle in corporate world, but my weekends are usually reserved for diving into a variety of projects that challenge me in new ways. This is where I push boundaries, experiment with Art-Code fusion, and build things just for the joy of it. This diversification not only keeps my skills sharp, but also fuels my creativity. You can take a look at a few of my projects below or view all projects directly</p>
+        <p>My work is a direct reflection of my commitment and my aim towards becoming a <em>whiz</em> in my field. While my main focus might be in my silly cubicle in corporate world, but my weekends are usually reserved for diving into a variety of projects that challenge me in new ways. This is where I push boundaries, experiment with <em>Art-Code fusion</em>, and build things just for the joy of it. This diversification not only keeps my skills sharp, but also fuels my creativity</p>
         <div class="cards">
             <div class="card">
                 <h2>JSON Visualizer</h2>
-                <img src="assets/images/json_visualizer.svg" alt="">
+                <img src="assets/images/json_visualizer.svg" alt="JSON Visualizer">
                 <ul>
                     <li>Python</li>
                     <li>SVG</li>
@@ -56,11 +59,11 @@
                     <li>CSS</li>
                 </ul>
                 <p>This program simplifies the analysis of complex, large-scale JSON datasets by visualizing them as an interactive tree structure. It allows users to easily identify the file's depth, distinguish between metadata and core data, and grasp the overall hierarchy through an intuitive pictorial representation, making daunting data structures much more accessible</p>
-                <button class="btn">Code</button>
+                <button class="btn"><a href="https://github.com/avezshariq/json_visualizer">Code</a></button>
             </div>
             <div class="card">
                 <h2>Telecom Churn case study</h2>
-                <img src="assets/images/telecom.svg" alt="">
+                <img src="assets/images/telecom.svg" alt="Telecom case study">
                 <ul>
                     <li>Python</li>
                     <li>Pandas</li>
@@ -68,18 +71,18 @@
                     <li>Seaborn</li>
                 </ul>
                 <p>This case study developed a churn prediction model for 7,000+ telecom customers. Following data cleaning and EDA, the model was refined through multiple iterations of feature selection using RFE and VIF to eliminate multicollinearity. After reaching satisfactory training results, the model was validated on test data to predict churn probability effectively</p>
-                <button class="btn">Code</button>
+                <button class="btn"><a href="https://github.com/avezshariq/DataScience/tree/main/logistic_regression">Code</a></button>
             </div>
             <div class="card">
                 <h2>Chess case study</h2>
-                <img src="assets/images/chess.svg" alt="">
+                <img src="assets/images/chess.svg" alt="chess case study">
                 <ul>
                     <li>Python</li>
                     <li>Pandas</li>
                     <li>Seaborn</li>
                 </ul>
                 <p>This Kaggle-sourced dataset analysis explored chess game trends using Seaborn visualizations. The workflow involved cleaning metrics like win rates and move counts, followed by feature engineering to categorize matches into Bullet, Rapid, or Classical formats. This structured Exploratory Data Analysis (EDA) provided deeper insights into player behavior across different game speeds</p>
-                <button class="btn">Code</button>
+                <button class="btn"><a href="https://github.com/avezshariq/DataScience/tree/main/chess">Code</a></button>
             </div>
         </div>
     </div>
@@ -89,22 +92,22 @@
 
     <div id="showcase">
         <h1>Noteable Skills</h1>
-        <p>With a strong foundation in Python, I build solutions by integrating diverse libraries. I love exploring and combining packages—like those for data analysis, web frameworks, and machine learning, to tackle new challenges. This approach lets me create flexible, custom tools that go beyond standard applications. For more insight on this, you can look into my projects</p>
+        <p>With a strong foundation in Python, I build solutions by integrating <em>diverse libraries</em>. I love exploring and combining packages—like those for data analysis, web frameworks, and machine learning, to tackle new challenges. This approach lets me create flexible, custom tools that go beyond standard applications</p>
         <div class="cards">
             <div class="card skill">
-                <img src="assets/icons/python.png" alt="">
+                <img src="assets/icons/python.png" alt="Python">
                 <p>Python</p>
             </div>
             <div class="card skill">
-                <img src="assets/icons/numpy.png" alt="">
+                <img src="assets/icons/numpy.png" alt="Numpy">
                 <p>Numpy</p>
             </div>
             <div class="card skill">
-                <img src="assets/icons/pandas.png" alt="">
+                <img src="assets/icons/pandas.png" alt="Pandas">
                 <p>Pandas</p>
             </div>
             <div class="card skill">
-                <img src="assets/icons/sql.png" alt="">
+                <img src="assets/icons/sql.png" alt="SQL">
                 <p>SQL</p>
             </div>
         </div>
@@ -115,24 +118,24 @@
 
     <div id="showcase">
         <h1>Skills beyond the horizon</h1>
-        <p>My passion for technology goes beyond coding! It's the power to create and explore anything that excites me. While I have a strong foundation in coding, my experience extends across various domains</p>
+        <p>My passion for technology goes beyond coding! It's the power to create and explore anything that excites me. While I have a strong foundation in coding, my experience extends across  <em>various domains</em></p>
         <div class="cards">
             <div class="card">
-                <img src="assets/images/3d.png" alt="">
+                <img src="assets/images/3d.png" alt="3D">
                 <h2>3D Animation</h2>
                 <p>I specialize in creating 3D animations that make tough concepts easy to grasp. By blending technical accuracy with polished visuals, I turn complex ideas into clear, engaging stories. My goal is to bridge the gap between "hard to learn" and "impossible to forget" through high-quality, immersive motion</p>
                 <a href="https://www.blender.org/" target="_blank"><button class="btn">Blender</button></a>
             </div>
             <div class="card">
-                <img src="assets/images/2d.png" alt="">
+                <img src="assets/images/2d.svg" alt="Vector Graphics">
                 <h2>Vector Graphics</h2>
-                <p>I use clean, scalable vector graphics to break down complex scientific data into clear, digestible visuals. By focusing on technical accuracy and sharp design, I transform abstract information into intuitive diagrams that make learning effortless. My work ensures that even the most intricate details remain polished and easy to understand</p>
+                <p>I use clean, scalable vector graphics to break down complex data into clear, digestible visuals. By focusing on technical accuracy and sharp design, I transform abstract information into intuitive diagrams that make learning effortless. My work ensures that even the most intricate details remain polished and easy to understand</p>
                 <a href="https://inkscape.org/" target="_blank"><button class="btn">Inkscape</button></a>
             </div>
             <div class="card">
-                <img src="assets/images/arch.png" alt="">
+                <img src="assets/images/fedora.svg" alt="Fedora">
                 <h2>Linux</h2>
-                <p>I champion a 100% Free and Open Source (FOSS) ecosystem on Linux to ensure my creative process is transparent and unrestricted. By using community-driven tools, I maintain full ownership of my work without subscriptions or vendor lock-in. This ethical approach fosters collaboration and ensures my scientific simulations are truly accessible</p>
+                <p>I use a 100% Free and Open Source (FOSS) ecosystem on Linux to ensure my creative process is transparent and unrestricted. By using community-driven tools, I maintain full ownership of my work without subscriptions or vendor lock-ins. Working this way makes it easier to collaborate and ensures my work is accessible and actually easier for others to use</p>
                 <a href="https://fedoraproject.org/kde/" target="_blank"><button class="btn">Fedora</button></a>
             </div>
         </div>

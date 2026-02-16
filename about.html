@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avez Portfolio</title>
+    <title>Avez | About</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/navigation.css">
     <link rel="stylesheet" href="assets/styles/hero.css">
@@ -13,11 +13,20 @@
 
 <body>
     <nav>
-        <div id="left"><a href="./index.html"><img src="./assets/icons/logo.svg" alt="Logo"></a></div>
-        <ul>
+        <ul class="side-bar">
+            <li class="btn" onclick=hideSidebar()><img src="assets/icons/close.svg" alt="Logo"></li>
             <li class="btn"><a href="./about.html">About</a></li>
+            <li class="btn"><a href="./blog_home.html">Blog</a></li>
             <li class="btn"><a href="./projects.html">Projects</a></li>
             <li class="btn"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
+        </ul>
+        <ul>
+            <li class="btn"><a href="./index.html"><img src="assets/icons/logo.svg" alt="Logo"></a></li>
+            <li class="btn hide-on-mobile"><a href="./about.html">About</a></li>
+            <li class="btn hide-on-mobile"><a href="./blog_home.html">Blog</a></li>
+            <li class="btn hide-on-mobile"><a href="./projects.html">Projects</a></li>
+            <li class="btn hide-on-mobile"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
+            <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
         </ul>
     </nav>
 
@@ -50,16 +59,32 @@
         <h1>Connect with me</h1>
         <div class="cards">
             <div class="card skill foot">
-                <img src="assets/icons/python.png" alt="">
+                <a class="btn" href="www.linkedin.com/in/avezshariq" target="_blank"><img src="assets/icons/linkedin.svg" alt="Linkedin"></a>
             </div>
             <div class="card skill foot">
-                <img src="assets/icons/python.png" alt="">
+                <a class="btn" href="https://github.com/avezshariq" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
             </div>
             <div class="card skill foot">
-                <img src="assets/icons/python.png" alt="">
+                <a class="btn" href="mailto:avezshariq@gmail.com" target="_blank"><img src="assets/icons/mail.svg" alt="Email"></a>
             </div>
         </div>
+        <p style="text-align: center; font-size: 0.7rem;">100% FOSS. Powered by penguins. I don't pay for licenses; I pay in sanity, sleep, and 4:00 AM tracebacks. My graphics are vector. So you can zoom in until you see the atoms - and even they; will be crisp
+        <br/>
+        [Pandas > Excel] - [Freedom > Features] - [Math > Pixels]
+        </p>
     </div>
+
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "flex"
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "none"
+        }
+    </script>
 
 </body>
 

@@ -26,10 +26,11 @@
     padding: 1rem;
     border-radius: 2rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
-    /* backdrop-filter: blur(2rem); */
+    backdrop-filter: blur(2rem);
     background-image: radial-gradient(ellipse at 100% 100%,
-            rgba(var(--accent-rgb), 0.2) 0%,
-            rgba(255, 255, 255, 0.01) 75%);
+        rgba(var(--accent-rgb), 0.2) 0%,
+        rgba(255, 255, 255, 0.01) 75%);
+    
 }
 
 .card h2 {
@@ -51,7 +52,6 @@
     border-radius: 10rem;
     font-size: 0.8rem;
 }
-
 
 
 .card img {
