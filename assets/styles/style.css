@@ -61,6 +61,7 @@ body {
 
 button {
     border: none;
+    cursor: pointer;
 }
 
 .card.foot{
@@ -87,6 +88,7 @@ a:hover {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 em {

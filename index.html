@@ -9,26 +9,35 @@
     <link rel="stylesheet" href="assets/styles/navigation.css">
     <link rel="stylesheet" href="assets/styles/hero.css">
     <link rel="stylesheet" href="assets/styles/showcase.css">
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
 
 <body>
     <nav>
-        <ul class="side-bar">
+        <!-- On Mobile -->
+        <div class="side-bar">
             <li class="btn" onclick=hideSidebar()><img src="assets/icons/close.svg" alt="Logo"></li>
-            <li class="btn"><a href="./about.html">About</a></li>
-            <li class="btn"><a href="./blog_home.html">Blog</a></li>
-            <li class="btn"><a href="./projects.html">Projects</a></li>
-            <li class="btn"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
-        </ul>
-        <ul>
-            <li class="btn"><a href="./index.html"><img src="assets/icons/logo.svg" alt="Logo"></a></li>
-            <li class="btn hide-on-mobile"><a href="./about.html">About</a></li>
-            <li class="btn hide-on-mobile"><a href="./blog_home.html">Blog</a></li>
-            <li class="btn hide-on-mobile"><a href="./projects.html">Projects</a></li>
-            <li class="btn hide-on-mobile"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
-            <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
-        </ul>
+            <a href="./about.html"><li class="btn">About</li></a>
+            <a href="./blog_home.html"><li class="btn">Blog</li></a>
+            <a href="./projects.html"><li class="btn">Projects</li></a>
+            <a href="assets/images/AvezShariq202601.pdf"><li class="btn">Resume</li></a>
+        </div>
+
+        <!-- On Desktop -->
+        <div class="logo">
+            <a href="./index.html" class="btn"><img src="assets/icons/logo.svg" alt="Logo"></a></a>
+        </div>
+
+        <div class="right">
+            <ul>
+                <a href="./about.html"><li class="btn hide-on-mobile">About</li></a>
+                <a href="./blog_home.html"><li class="btn hide-on-mobile">Blog</li></a>
+                <a href="./projects.html"><li class="btn hide-on-mobile">Projects</li></a>
+                <a href="assets/images/AvezShariq202601.pdf"><li class="btn hide-on-mobile">Resume</li></a>
+                
+                <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
+            </ul>
+        </div>
     </nav>
 
     <div id="hero">
@@ -51,7 +60,7 @@
         <div class="cards">
             <div class="card">
                 <h2>JSON Visualizer</h2>
-                <img src="assets/images/json_visualizer.svg" alt="JSON Visualizer">
+                <img src="./assets/images/json_visualizer.svg" alt="JSON Visualizer">
                 <ul>
                     <li>Python</li>
                     <li>SVG</li>
@@ -59,11 +68,11 @@
                     <li>CSS</li>
                 </ul>
                 <p>This program simplifies the analysis of complex, large-scale JSON datasets by visualizing them as an interactive tree structure. It allows users to easily identify the file's depth, distinguish between metadata and core data, and grasp the overall hierarchy through an intuitive pictorial representation, making daunting data structures much more accessible</p>
-                <button class="btn"><a href="https://github.com/avezshariq/json_visualizer">Code</a></button>
+                <a href="https://github.com/avezshariq/json_visualizer" target="_blank"><button class="btn">Code</button></a>
             </div>
             <div class="card">
                 <h2>Telecom Churn case study</h2>
-                <img src="assets/images/telecom.svg" alt="Telecom case study">
+                <img src="./assets/images/telecom.svg" alt="Telecom case study">
                 <ul>
                     <li>Python</li>
                     <li>Pandas</li>
@@ -71,18 +80,18 @@
                     <li>Seaborn</li>
                 </ul>
                 <p>This case study developed a churn prediction model for 7,000+ telecom customers. Following data cleaning and EDA, the model was refined through multiple iterations of feature selection using RFE and VIF to eliminate multicollinearity. After reaching satisfactory training results, the model was validated on test data to predict churn probability effectively</p>
-                <button class="btn"><a href="https://github.com/avezshariq/DataScience/tree/main/logistic_regression">Code</a></button>
+                <a href="https://github.com/avezshariq/DataScience/tree/main/logistic_regression" target="_blank"><button class="btn">Code</button></a>
             </div>
             <div class="card">
                 <h2>Chess case study</h2>
-                <img src="assets/images/chess.svg" alt="chess case study">
+                <img src="./assets/images/chess.svg" alt="chess case study">
                 <ul>
                     <li>Python</li>
                     <li>Pandas</li>
                     <li>Seaborn</li>
                 </ul>
                 <p>This Kaggle-sourced dataset analysis explored chess game trends using Seaborn visualizations. The workflow involved cleaning metrics like win rates and move counts, followed by feature engineering to categorize matches into Bullet, Rapid, or Classical formats. This structured Exploratory Data Analysis (EDA) provided deeper insights into player behavior across different game speeds</p>
-                <button class="btn"><a href="https://github.com/avezshariq/DataScience/tree/main/chess">Code</a></button>
+                <a href="https://github.com/avezshariq/DataScience/tree/main/chess" target="_blank"><button class="btn">Code</button></a>
             </div>
         </div>
     </div>

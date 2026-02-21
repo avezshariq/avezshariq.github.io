@@ -11,25 +11,35 @@
     <link rel="stylesheet" href="assets/styles/showcase.css">
     <link rel="stylesheet" href="assets/styles/projects.css">
     <link rel="stylesheet" href="assets/styles/blog.css">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
 
 <body>
     <nav>
-        <ul class="side-bar">
+        <!-- On Mobile -->
+        <div class="side-bar">
             <li class="btn" onclick=hideSidebar()><img src="assets/icons/close.svg" alt="Logo"></li>
-            <li class="btn"><a href="./about.html">About</a></li>
-            <li class="btn"><a href="./blog_home.html">Blog</a></li>
-            <li class="btn"><a href="./projects.html">Projects</a></li>
-            <li class="btn"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
-        </ul>
-        <ul>
-            <li class="btn"><a href="./index.html"><img src="assets/icons/logo.svg" alt="Logo"></a></li>
-            <li class="btn hide-on-mobile"><a href="./about.html">About</a></li>
-            <li class="btn hide-on-mobile"><a href="./blog_home.html">Blog</a></li>
-            <li class="btn hide-on-mobile"><a href="./projects.html">Projects</a></li>
-            <li class="btn hide-on-mobile"><a href="assets/images/AvezShariq202601.pdf">Resume</a></li>
-            <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
-        </ul>
+            <a href="./about.html"><li class="btn">About</li></a>
+            <a href="./blog_home.html"><li class="btn">Blog</li></a>
+            <a href="./projects.html"><li class="btn">Projects</li></a>
+            <a href="assets/images/AvezShariq202601.pdf"><li class="btn">Resume</li></a>
+        </div>
+
+        <!-- On Desktop -->
+        <div class="logo">
+            <a href="./index.html" class="btn"><img src="assets/icons/logo.svg" alt="Logo"></a></a>
+        </div>
+
+        <div class="right">
+            <ul>
+                <a href="./about.html"><li class="btn hide-on-mobile">About</li></a>
+                <a href="./blog_home.html"><li class="btn hide-on-mobile">Blog</li></a>
+                <a href="./projects.html"><li class="btn hide-on-mobile">Projects</li></a>
+                <a href="assets/images/AvezShariq202601.pdf"><li class="btn hide-on-mobile">Resume</li></a>
+                
+                <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="showcase">
@@ -44,15 +54,8 @@
                 <p class="description">There will be a lot of content over here. Copy paste some description and add 3 dots in the end ...</p>
                 <p class="topic">Python</p>
                 <p class="pub-date">16 Feb 2026</p>
-                <h2 class="heading">Deep Copy vs shallow copy in Python</h2>
-                <a class="btn action" href="#">--></a>
-            </div>
-            <div class="blog" style="--blog-img: url(../images/telecom.svg);">
-                <p class="description">There will be a lot of content over here. Copy paste some description and add 3 dots in the end ...</p>
-                <p class="topic">Databricks</p>
-                <p class="pub-date">19 Feb 2026</p>
-                <h2 class="heading">Wide & Narrow shuffles in databricks</h2>
-                <a class="btn action" href="#">--></a>
+                <h2 class="heading">Copying in Python</h2>
+                <a class="btn action" href="./blogs/python/shallow_deep.html">--></a>
             </div>
         </div>
     </div>
@@ -67,41 +70,7 @@
                 <h2 class="heading">Deep Copy vs shallow copy in Python</h2>
                 <a class="btn action" href="#">--></a>
             </div>
-            <div class="blog" style="--blog-img: url(../images/telecom.svg);">
-                <p class="description">There will be a lot of content over here. Copy paste some description and add 3 dots in the end ...</p>
-                <p class="topic">Databricks</p>
-                <p class="pub-date">19 Feb 2026</p>
-                <h2 class="heading">Wide & Narrow shuffles in databricks</h2>
-                <a class="btn action" href="#">--></a>
-            </div>
-            <div class="blog" style="--blog-img: url(../images/telecom.svg);">
-                <p class="description">There will be a lot of content over here. Copy paste some description and add 3 dots in the end ...</p>
-                <p class="topic">Databricks</p>
-                <p class="pub-date">19 Feb 2026</p>
-                <h2 class="heading">Wide & Narrow shuffles in databricks</h2>
-                <a class="btn action" href="#">--></a>
-            </div>
-            <div class="blog" style="--blog-img: url(../images/telecom.svg);">
-                <p class="description">There will be a lot of content over here. Copy paste some description and add 3 dots in the end ...</p>
-                <p class="topic">Databricks</p>
-                <p class="pub-date">19 Feb 2026</p>
-                <h2 class="heading">Wide & Narrow shuffles in databricks</h2>
-                <a class="btn action" href="#">--></a>
-            </div>
-            <div class="blog" style="--blog-img: url(../images/telecom.svg);">
-                <p class="description">There will be a lot of content over here. Copy paste some description and add 3 dots in the end ...</p>
-                <p class="topic">Databricks</p>
-                <p class="pub-date">19 Feb 2026</p>
-                <h2 class="heading">Wide & Narrow shuffles in databricks</h2>
-                <a class="btn action" href="#">--></a>
-            </div>
-            <div class="blog" style="--blog-img: url(../images/telecom.svg);">
-                <p class="description">There will be a lot of content over here. Copy paste some description and add 3 dots in the end ...</p>
-                <p class="topic">Databricks</p>
-                <p class="pub-date">19 Feb 2026</p>
-                <h2 class="heading">Wide & Narrow shuffles in databricks</h2>
-                <a class="btn action" href="#">--></a>
-            </div>
+            
         </div>
     </div>
 
