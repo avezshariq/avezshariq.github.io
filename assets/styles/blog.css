@@ -1,0 +1,72 @@
+
+.featured-blogs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.blog {
+    --blog-img: url(../images/hero_snowflake.svg);
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr; 
+    grid-template-rows: repeat(3 1fr);
+    gap: 0.5rem;
+    max-width: 40%;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: left;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+    background: var(--blog-img);
+    grid-template-areas: 
+        "topic description description"
+        "pub-date description description"
+        "heading heading action";
+}
+
+.blog > p,
+.blog > a, 
+.blog > h2 {
+    background: rgba(0,0,0, 0.3);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(1rem);
+}
+
+.blog > a {
+    font-weight: 800;
+}
+
+
+.description {grid-area: description;}
+.read-time { grid-area: read-time;}
+.topic     { grid-area: topic;}
+.pub-date  { grid-area: pub-date;}
+.heading {grid-area: heading}
+.action {grid-area: action;}
+
+.read-time, .topic, .pub-date, .action { 
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+@media(max-width: 1024px) {
+    .featured-blogs {
+        flex-direction: column;
+    }
+    .blog {
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: repeat(4 1fr);
+        max-width: 90%;
+        grid-template-areas: 
+        "heading heading"
+        "description description"
+        "pub-date topic"
+        "action action";
+    }
+}

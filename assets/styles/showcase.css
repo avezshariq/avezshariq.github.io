@@ -1,4 +1,4 @@
-#showcase {
+.showcase {
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -26,7 +26,6 @@
     padding: 1rem;
     border-radius: 2rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
-    backdrop-filter: blur(2rem);
     background-image: radial-gradient(ellipse at 100% 100%,
         rgba(var(--accent-rgb), 0.2) 0%,
         rgba(255, 255, 255, 0.01) 75%);
@@ -71,7 +70,7 @@
 
 
 @media (min-width: 1024px) {
-    #showcase {
+    .showcase {
         padding: 0 5rem;
     }
 }
