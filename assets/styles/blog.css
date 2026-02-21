@@ -55,6 +55,11 @@
     font-size: 0.8rem;
 }
 
+.blog-heading {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 @media(max-width: 1024px) {
     .featured-blogs {
         flex-direction: column;
