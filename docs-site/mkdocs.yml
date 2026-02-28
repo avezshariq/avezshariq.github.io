@@ -1,5 +1,5 @@
 site_name: My Stories
-site_url: https://avezshariq.github.io/docs-site/
+site_url: https://avezshariq.github.io/
 theme:
   name: dracula
   logo: assets/styles/favicon.svg
