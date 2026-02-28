@@ -1,0 +1,11 @@
+site_name: My Stories
+site_url: https://avezshariq.github.io/docs-site/
+theme:
+  name: dracula
+  logo: assets/styles/favicon.svg
+  favicon: assets/styles/favicon.svg
+
+use_directory_urls: true
+
+extra_css:
+  - assets/styles/extra.css

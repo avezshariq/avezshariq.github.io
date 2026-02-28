@@ -1,0 +1,38 @@
+name: Deploy Hybrid Site
+on:
+  push:
+    branches: [main] # or master, check your branch name!
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs
+        run: pip install mkdocs mkdocs-dracula-theme
+
+      - name: Build MkDocs
+        run: |
+          cd docs-site
+          mkdocs build --site-dir ../public/docs-site
+
+      - name: Copy Root HTML/CSS/Assets
+        run: |
+          # Copy your main HTML files
+          cp *.html public/
+          cp favicon.svg public/
+          # Copy your assets folder (if it exists)
+          cp -r assets public/ || echo "No root assets folder found"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
