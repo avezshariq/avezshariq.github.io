@@ -20,8 +20,8 @@ jobs:
 
       - name: Build MkDocs
         run: |
-          cd docs-site
-          mkdocs build --site-dir ../public/docs-site
+          cd my-stories
+          mkdocs build --site-dir ../public/my-stories
 
       - name: Copy Root HTML/CSS/Assets
         run: |
