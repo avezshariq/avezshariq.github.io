@@ -1,0 +1,84 @@
+
+
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.image-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.image-group img {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 33%;
+}
+
+
+#blur h1{
+    backdrop-filter: blur(2rem);
+    border-radius: 2rem;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+    font-weight: 200;
+}
+
+
+
+
+#code {
+    background: linear-gradient(to bottom right, #3dd2ff 20%, #8e3dff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 3rem;
+    letter-spacing: -0.3rem;
+    font-family: "Share Tech Mono", monospace;
+}
+
+#art {
+    background: linear-gradient(to bottom right, #f5e28e 20%, #f18585 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 3rem;
+    font-family: "Limelight", sans-serif;
+}
+
+@media (max-width: 767px) {
+    .image-group {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: auto;
+    }
+    .image-group img{
+        width: 100%;
+    }
+    #blur h1 {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #blur h1{
+        font-size: 1rem;
+    }
+    #code, #art {
+        font-size: 2rem;
+    }
+}

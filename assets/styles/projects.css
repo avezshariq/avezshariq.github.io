@@ -1,0 +1,33 @@
+.img-container img {
+    width: 100%;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, transparent, rgb(var(--accent-rgb), 0.1));
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+    border-radius: 2rem;
+}
+.project .card {
+    max-width: 100%;
+    background: transparent;
+    box-shadow: none;
+}
+
+@media (max-width: 600px) {
+    .project {
+        grid-template-columns: 1fr;
+        background: linear-gradient(to bottom right, transparent, rgb(var(--accent-rgb), 0.1));
+    }
+}

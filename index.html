@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avez | Portfolio</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/navigation.css">
+    <link rel="stylesheet" href="assets/styles/hero.css">
+    <link rel="stylesheet" href="assets/styles/showcase.css">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+
+<body>
+    <nav>
+        <!-- On Mobile -->
+        <div class="side-bar">
+            <li class="btn" onclick=hideSidebar()><img src="assets/icons/close.svg" alt="Logo"></li>
+            <a href="./about.html"><li class="btn">About</li></a>
+            <a href="./blog_home.html"><li class="btn">Blog</li></a>
+            <a href="./projects.html"><li class="btn">Projects</li></a>
+            <a href="assets/images/AvezShariq202601.pdf"><li class="btn">Resume</li></a>
+        </div>
+
+        <!-- On Desktop -->
+        <div class="logo">
+            <a href="./index.html" class="btn"><img src="assets/icons/logo.svg" alt="Logo"></a></a>
+        </div>
+
+        <div class="right">
+            <ul>
+                <a href="./about.html"><li class="btn hide-on-mobile">About</li></a>
+                <a href="./blog_home.html"><li class="btn hide-on-mobile">Blog</li></a>
+                <a href="./projects.html"><li class="btn hide-on-mobile">Projects</li></a>
+                <a href="assets/images/AvezShariq202601.pdf"><li class="btn hide-on-mobile">Resume</li></a>
+                
+                <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="hero">
+        <div class="image-group">
+            <img src="assets/images/hero_cloud.svg" alt="Cloud">
+            <img src="assets/images/hero_snowflake.svg" alt="Snowflake">
+            <img src="assets/images/hero_neural.svg" alt="Neural">
+        </div>
+        <div id="blur">
+            <h1>Merging <br/><span id="code">Code</span> & <span id="art">Art</span><br/> to create Future Technology</h1>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="showcase">
+        <h1>Projects Showcase</h1>
+        <p>My work is a direct reflection of my commitment and my aim towards becoming a <em>whiz</em> in my field. While my main focus might be in my silly cubicle in corporate world, but my weekends are usually reserved for diving into a variety of projects that challenge me in new ways. This is where I push boundaries, experiment with <em>Art-Code fusion</em>, and build things just for the joy of it. This diversification not only keeps my skills sharp, but also fuels my creativity</p>
+        <div class="cards">
+            <div class="card">
+                <h2>JSON Visualizer</h2>
+                <img src="./assets/images/json_visualizer.svg" alt="JSON Visualizer">
+                <ul>
+                    <li>Python</li>
+                    <li>SVG</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <p>This program simplifies the analysis of complex, large-scale JSON datasets by visualizing them as an interactive tree structure. It allows users to easily identify the file's depth, distinguish between metadata and core data, and grasp the overall hierarchy through an intuitive pictorial representation, making daunting data structures much more accessible</p>
+                <a href="https://github.com/avezshariq/json_visualizer" target="_blank"><button class="btn">Code</button></a>
+            </div>
+            <div class="card">
+                <h2>Telecom Churn case study</h2>
+                <img src="./assets/images/telecom.svg" alt="Telecom">
+                <ul>
+                    <li>Python</li>
+                    <li>Pandas</li>
+                    <li>Scikit Learn</li>
+                    <li>Seaborn</li>
+                </ul>
+                <p>This case study developed a churn prediction model for 7,000+ telecom customers. Following data cleaning and EDA, the model was refined through multiple iterations of feature selection using RFE and VIF to eliminate multicollinearity. After reaching satisfactory training results, the model was validated on test data to predict churn probability effectively</p>
+                <a href="https://github.com/avezshariq/DataScience/tree/main/logistic_regression" target="_blank"><button class="btn">Code</button></a>
+            </div>
+            <div class="card">
+                <h2>Chess case study</h2>
+                <img src="./assets/images/chess.svg" alt="chess">
+                <ul>
+                    <li>Python</li>
+                    <li>Pandas</li>
+                    <li>Seaborn</li>
+                </ul>
+                <p>This Kaggle-sourced dataset analysis explored chess game trends using Seaborn visualizations. The workflow involved cleaning metrics like win rates and move counts, followed by feature engineering to categorize matches into Bullet, Rapid, or Classical formats. This structured Exploratory Data Analysis (EDA) provided deeper insights into player behavior across different game speeds</p>
+                <a href="https://github.com/avezshariq/DataScience/tree/main/chess" target="_blank"><button class="btn">Code</button></a>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="showcase">
+        <h1>Noteable Skills</h1>
+        <p>With a strong foundation in Python, I build solutions by integrating <em>diverse libraries</em>. I love exploring and combining packages—like those for data analysis, web frameworks, and machine learning, to tackle new challenges. This approach lets me create flexible, custom tools that go beyond standard applications</p>
+        <div class="cards">
+            <div class="card skill">
+                <img src="assets/icons/python.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="card skill">
+                <img src="assets/icons/numpy.png" alt="Numpy">
+                <p>Numpy</p>
+            </div>
+            <div class="card skill">
+                <img src="assets/icons/pandas.png" alt="Pandas">
+                <p>Pandas</p>
+            </div>
+            <div class="card skill">
+                <img src="assets/icons/sql.png" alt="SQL">
+                <p>SQL</p>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="showcase">
+        <h1>Skills beyond the horizon</h1>
+        <p>My passion for technology goes beyond coding! It's the power to create and explore anything that excites me. While I have a strong foundation in coding, my experience extends across  <em>various domains</em></p>
+        <div class="cards">
+            <div class="card">
+                <img src="assets/images/3d.png" alt="3D">
+                <h2>3D Animation</h2>
+                <p>I specialize in creating 3D animations that make tough concepts easy to grasp. By blending technical accuracy with polished visuals, I turn complex ideas into clear, engaging stories. My goal is to bridge the gap between "hard to learn" and "impossible to forget" through high-quality, immersive motion</p>
+                <a href="https://www.blender.org/" target="_blank"><button class="btn">Blender</button></a>
+            </div>
+            <div class="card">
+                <img src="assets/images/2d.svg" alt="Vector Graphics">
+                <h2>Vector Graphics</h2>
+                <p>I use clean, scalable vector graphics to break down complex data into clear, digestible visuals. By focusing on technical accuracy and sharp design, I transform abstract information into intuitive diagrams that make learning effortless. My work ensures that even the most intricate details remain polished and easy to understand</p>
+                <a href="https://inkscape.org/" target="_blank"><button class="btn">Inkscape</button></a>
+            </div>
+            <div class="card">
+                <img src="assets/images/linux.svg" alt="Linux">
+                <h2>Linux</h2>
+                <p>I use a 100% Free and Open Source (FOSS) ecosystem on Linux to ensure my creative process is transparent and unrestricted. By using community-driven tools, I maintain full ownership of my work without subscriptions or vendor lock-ins. Working this way makes it easier to collaborate and ensures my work is accessible and actually easier for others to use</p>
+                <a href="https://fedoraproject.org/kde/" target="_blank"><button class="btn">Fedora</button></a>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="showcase">
+        <h1>Connect with me</h1>
+        <div class="cards">
+            <div class="card skill foot">
+                <a class="btn" href="www.linkedin.com/in/avezshariq" target="_blank"><img src="assets/icons/linkedin.svg" alt="Linkedin"></a>
+            </div>
+            <div class="card skill foot">
+                <a class="btn" href="https://github.com/avezshariq" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
+            </div>
+            <div class="card skill foot">
+                <a class="btn" href="mailto:avezshariq@gmail.com" target="_blank"><img src="assets/icons/mail.svg" alt="Email"></a>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 0.7rem;">100% FOSS. Powered by penguins. I don't pay for licenses; I pay in sanity, sleep, and 4:00 AM tracebacks. My graphics are vector. So you can zoom in until you see the atoms - and even they; will be crisp
+        <br/>
+        [Pandas > Excel] - [Freedom > Features] - [Math > Pixels]
+        </p>
+    </div>
+
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "flex"
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "none"
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+.drac-text  {
+    font-family: "Inter", sans-serif;
+}
+
+.drac-text-grey-ternary {
+    color: white;
+    background-color: black;
+}
+
+.hljs {
+    color: white;
+}
+
+.hljs-comment {
+    font-style: italic;
+    font-family: "Borel", cursive;
+}
+
+pre code, code {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+}
+
+strong, em {
+    color: var(--purple);
+}
+
+blockquote {
+    background-color: var(--purple);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+blockquote > p {
+    margin: 0;
+}
+
+
+footer div a.footer-text:first-child::before {
+    content: "© 2026 Avez Shariq | ";
+    font-weight: bold;
+    font-family: "Borel", cursive;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avez | Projects</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/navigation.css">
+    <link rel="stylesheet" href="assets/styles/hero.css">
+    <link rel="stylesheet" href="assets/styles/showcase.css">
+    <link rel="stylesheet" href="assets/styles/projects.css">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+
+<body>
+    <nav>
+        <!-- On Mobile -->
+        <div class="side-bar">
+            <li class="btn" onclick=hideSidebar()><img src="assets/icons/close.svg" alt="Logo"></li>
+            <a href="./about.html"><li class="btn">About</li></a>
+            <a href="./blog_home.html"><li class="btn">Blog</li></a>
+            <a href="./projects.html"><li class="btn">Projects</li></a>
+            <a href="assets/images/AvezShariq202601.pdf"><li class="btn">Resume</li></a>
+        </div>
+
+        <!-- On Desktop -->
+        <div class="logo">
+            <a href="./index.html" class="btn"><img src="assets/icons/logo.svg" alt="Logo"></a></a>
+        </div>
+
+        <div class="right">
+            <ul>
+                <a href="./about.html"><li class="btn hide-on-mobile">About</li></a>
+                <a href="./blog_home.html"><li class="btn hide-on-mobile">Blog</li></a>
+                <a href="./projects.html"><li class="btn hide-on-mobile">Projects</li></a>
+                <a href="assets/images/AvezShariq202601.pdf"><li class="btn hide-on-mobile">Resume</li></a>
+                
+                <li class="btn menu-button" onclick=showSidebar()><img src="assets/icons/menu.svg" alt="Menu"></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="showcase">
+        <h1>Projects Showcase</h1>
+        <p>My work is a direct reflection of my commitment to being a polymath in my field. While my main focus might be in my silly cubicle in corporate world, but my weekends are usually reserved for diving into a variety of projects that challenge me in new ways. This is where I push boundaries, experiment with Art-Code fusion, and build things just for the joy of it. This diversification not only keeps my skills sharp, but also fuels my creativity. You can take a look at a few of my projects below or view all projects directly</p>
+        <br/>
+        <div class="projects">
+            <div class="project">
+                <div class="img-container">
+                    <img src="./assets/images/json_visualizer.svg" alt="JSON Visualizer">
+                </div>
+                <div class="card">
+                    <h2>JSON Visualizer</h2>
+                    <p>Opening a JSON file and getting an understanding of its structure can be pretty daunting sometimes, especially if it involves a huge amount of data. This program helps visualise the tree of the JSON file. It can be used to get some useful information like - structure, depth (number of levels in heierarchy). It presents all this in a beautiful and scalable pictorial format
+                    </p>
+                    <ul>
+                        <li>Python</li>
+                        <li>SVG</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <a href="https://github.com/avezshariq/json_visualizer" target="_blank"><button class="btn">Code</button></a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="img-container">
+                    <img src="./assets/images/telecom.svg" alt="Telecom">
+                </div>
+                <div class="card">
+                    <h2>Telecom churn case study</h2>
+                    <p>The case study was regarding customer churn prediction in Telecom industry. There are 7000+ entries and 20+ parameters. The data includes a column to show whether the customer has churned or not. Based on this, a model needs to be created to predict the churn probability of a given customer. Data cleanup was performed. This involved checking outliers, converting text entries to numeric etc.. Simple Exploratory Data Analysis (EDA) was performed. A suitable model was built after splitting the data into test and train datasets. Feature elimination was performed using RFE and VIF in multiple iterations. Once we reached satisfactory results on train case, then the model was applied to the test case. Eventually the results that were achieved are: <em>Accuracy=73.54%, Sensitivity=74.2%, Specificity=73.3% </em></p>
+                    <ul>
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Scikit Learn</li>
+                        <li>Seaborn</li>
+                    </ul>
+                    <a href="https://github.com/avezshariq/DataScience/tree/main/logistic_regression" target="_blank"><button class="btn">Code</button></a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="img-container">
+                    <img src="./assets/images/chess.svg" alt="Chess">
+                </div>
+                <div class="card">
+                    <h2>Chess case study</h2>
+                    <p>This dataset was taken from kaggle. It has a lot of useful columns like who won the game, time taken, number of moves, opening type etc... Exploratory Data analysis was done on the dataset and visualisation was done in seaborn. Created appropriate columns like the game format (classified the game as Bullet, Rapid, Classical) and performed analysis based on that</p>
+                    <ul>
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Seaborn</li>
+                    </ul>
+                    <a href="https://github.com/avezshariq/DataScience/tree/main/chess" target="_blank"><button class="btn">Code</button></a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="img-container">
+                    <img src="./assets/images/solar.svg" alt="Solar">
+                </div>
+                <div class="card">
+                    <h2>Know your Solar System</h2>
+                    <p>imply reading data does not give a perspective. So, visualise it here. Made in pygame.Compare facts like sizes, rotation speeds, revolution speeds, speed of travel in space (basically a drag race of all planets) in a fun way:
+                    </p>
+                    <ul>
+                        <li>Python</li>
+                        <li>PyGame</li>
+                    </ul>
+                    <a href="https://github.com/avezshariq/solar_system" target="_blank"><button class="btn">Code</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="showcase">
+        <h1>Connect with me</h1>
+        <div class="cards">
+            <div class="card skill foot">
+                <a class="btn" href="www.linkedin.com/in/avezshariq" target="_blank"><img src="assets/icons/linkedin.svg" alt="Linkedin"></a>
+            </div>
+            <div class="card skill foot">
+                <a class="btn" href="https://github.com/avezshariq" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
+            </div>
+            <div class="card skill foot">
+                <a class="btn" href="mailto:avezshariq@gmail.com" target="_blank"><img src="assets/icons/mail.svg" alt="Email"></a>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 0.7rem;">100% FOSS. Powered by penguins. I don't pay for licenses; I pay in sanity, sleep, and 4:00 AM tracebacks. My graphics are vector. So you can zoom in until you see the atoms - and even they; will be crisp
+        <br/>
+        [Pandas > Excel] - [Freedom > Features] - [Math > Pixels]
+        </p>
+    </div>
+
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "flex"
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector(".side-bar")
+            sidebar.style.display = "none"
+        }
+    </script>
+
+</body>
+
+</html>

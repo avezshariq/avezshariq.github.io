@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Limelight&family=Share+Tech+Mono&display=swap');
+
+:root {
+    --accent-rgb: 0, 229, 255;
+    --bg-rgb: 10, 16, 26;
+}
+
+
+body {
+    background-color: rgb(var(--bg-rgb));
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+
+.btn {
+    color: white;
+    position: relative;
+    padding: 0.8rem 1.8rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* backdrop-filter: blur(1rem); */
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--c2);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 0;
+    height: 0.2rem;
+    background-color: rgb(var(--accent-rgb));
+    border-radius: 1rem;
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover::after {
+    width: 80%;
+}
+
+.btn:active::after {
+    width: 90%;
+    box-shadow: 0 0 10px rgb(var(--accent-rgb));
+    transition: width 0.05s linear;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.card.foot{
+    box-shadow: none;
+    background: transparent;
+}
+
+.foot a{
+    padding: 0.5rem;
+}
+
+a.btn {
+    text-align: center;
+}
+
+li {
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+em {
+    font-weight: 700;
+    color: rgb(var(--accent-rgb))
+}
