@@ -6,7 +6,7 @@ I've always found that a good diagram can do more than a wall of text. Because I
 
 ## Useful links
 
-- ![Portfolio Site 🧔🏻‍♂️](../../index.html)
-- ![About 📜](../../about.html)
-- ![Projects 🦾](../../projects.html)
+- [Portfolio Site 🧔🏻‍♂️](../../index.html)
+- [About 📜](../../about.html)
+- [Projects 🦾](../../projects.html)
 
