@@ -7,11 +7,6 @@ theme:
 
 use_directory_urls: true
 
-nav:
-  - "Portfolio Home 🧔🏻‍♂️": ../../index.html
-  - "Blog Home 📖": index.md
-  - Projects: ../../projects.html
-  - About: ../../about.html
 
 extra_css:
   - assets/styles/extra.css
