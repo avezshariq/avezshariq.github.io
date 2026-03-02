@@ -37,6 +37,15 @@ blockquote > p {
     margin: 0;
 }
 
+thead {
+    background-color: var(--yellow);
+    color: black;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 
 footer div a.footer-text:first-child::before {
     content: "© 2026 Avez Shariq | ";
