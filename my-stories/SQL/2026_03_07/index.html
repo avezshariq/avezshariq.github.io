@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Ranking in SQL - My Stories</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://avezshariq.github.io/my-stories/SQL/2026_03_07/">
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/styles/extra.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/styles/favicon.svg">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../assets/styles/favicon.svg" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">My Stories</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    My Stories (Blog Home)
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#python-collapse" aria-expanded="false">
+                    Python
+                </a>
+                <div class="collapse" id="python-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Python/2026_02_26/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Copying in Python (WIP)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Python/2026_02_28/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tuples are lighter than a list
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#sql-collapse" aria-expanded="false">
+                    SQL
+                </a>
+                <div class="collapse" id="sql-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ranking in SQL
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../../Python/2026_02_28/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a 
+                        class="btn-preview drac-btn drac-text-white--hover disabled" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="ranking-in-sql">Ranking in SQL</h1>
+<h2 id="the-ordering">The Ordering</h2>
+<p>Lets get a table with some data. Imagine a table of revenue💵 generated by each sales representative👔. We want to find the top performers🌟</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Id</th>
+<th style="text-align: center;">Team</th>
+<th style="text-align: right;">Name</th>
+<th style="text-align: left;">Revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Abraham</td>
+<td style="text-align: left;">6005</td>
+</tr>
+<tr>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">John</td>
+<td style="text-align: left;">5611</td>
+</tr>
+<tr>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Helena</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Kate</td>
+<td style="text-align: left;">8180</td>
+</tr>
+<tr>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Jacob</td>
+<td style="text-align: left;">9327</td>
+</tr>
+<tr>
+<td style="text-align: center;">106</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Mary</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">Menalaus</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Adam</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">109</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Noah</td>
+<td style="text-align: left;">7483</td>
+</tr>
+<tr>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Jenny</td>
+<td style="text-align: left;">6000</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-sql">SELECT
+    Id,
+    Name,
+    Revenue
+FROM
+    salesData_tbl
+ORDER BY
+    Revenue DESC;
+</code></pre>
+<blockquote>
+<p>The default ordering in SQL is ascending (keyword: <code>ASC</code>). To get descending we used the <code>DESC</code></p>
+<p>Professionally, its better to be explicit and mention <code>ASC</code> (even if its default) to avoid confusion while understanding the code</p>
+</blockquote>
+<p>To, us the result looks something like this:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Id</th>
+<th style="text-align: center;">Team</th>
+<th style="text-align: right;">Name</th>
+<th style="text-align: left;">Revenue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Jacob</td>
+<td style="text-align: left;">9327</td>
+</tr>
+<tr>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Helena</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">106</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Mary</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">Menalaus</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Adam</td>
+<td style="text-align: left;">8461</td>
+</tr>
+<tr>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Kate</td>
+<td style="text-align: left;">8180</td>
+</tr>
+<tr>
+<td style="text-align: center;">109</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Noah</td>
+<td style="text-align: left;">7483</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Abraham</td>
+<td style="text-align: left;">6005</td>
+</tr>
+<tr>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Jenny</td>
+<td style="text-align: left;">6000</td>
+</tr>
+<tr>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">John</td>
+<td style="text-align: left;">5611</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-ranking">The ranking</h2>
+<p>What we did above is sufficient for cases like getting the top performer. In many cases people end up doing ranking. While it has its use cases, it is not necessary right now</p>
+<p>Then, when is it necessary🤔?</p>
+<p>We have 3 different <strong>window functions</strong> in SQL for ranking. They are:</p>
+<ol>
+<li>Row number</li>
+<li>Rank</li>
+<li>Dense Rank</li>
+</ol>
+<p>Most practically, we use <strong>Row number</strong> in Data engineering to remove duplicates, so you might have heard and used it before😃. But today, we shall explore where to use all of them</p>
+<p>But before that, lets actually look at what they do to avoid confusion and a side-by-side comparison. So, lets run the query:</p>
+<pre><code class="language-sql">SELECT
+    Id,
+    Name,
+    Revenue,
+    ROW_NUMBER() OVER (ORDER BY Revenue Desc) as RowNum,
+    RANK() OVER (ORDER BY Revenue Desc) as Rnk,
+    DENSE_RANK() OVER (ORDER BY Revenue Desc) as DRnk
+FROM
+    salesData_tbl;
+</code></pre>
+<blockquote>
+<p>Notice how we didn't specify the <code>ORDER BY Revenue</code> in the end because its part of window function syntax</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Id</th>
+<th style="text-align: center;">Team</th>
+<th style="text-align: right;">Name</th>
+<th style="text-align: left;">Revenue</th>
+<th style="text-align: center;">RowNum</th>
+<th style="text-align: center;">Rnk</th>
+<th style="text-align: center;">Drnk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Jacob</td>
+<td style="text-align: left;">9327</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Helena</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">106</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Mary</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">Menalaus</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Adam</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Kate</td>
+<td style="text-align: left;">8180</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">109</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Noah</td>
+<td style="text-align: left;">7483</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Abraham</td>
+<td style="text-align: left;">6005</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Jenny</td>
+<td style="text-align: left;">6000</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">John</td>
+<td style="text-align: left;">5611</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">7</td>
+</tr>
+</tbody>
+</table>
+<p>The real deal is when there is a tie. Obviously, there is a tie between Helena, Mary, Menalaus and Adam</p>
+<h3 id="row-number">Row Number</h3>
+<p>Row number ensures that it does not contain a duplicate value. So, when there is a tie among them, it puts the tied people in random order</p>
+<blockquote>
+<p>If we want a specific order for tied people we can do that as <code>ROW_NUMBER() OVER (ORDER BY Revenue DESC, Id ASC)</code></p>
+</blockquote>
+<p>Imagine a scenario where I held this as an examination/interview and these are their scores. I want to select 4 people for my company🏭. Row number does the job perfect for me</p>
+<h3 id="rank">Rank</h3>
+<p>Rank is used to find how many people are better than you. Suppose, Kate wants to login and see how many people out-performed her. Since, her rank is 6 it means 5 people out-performed her. Similarly for Menalaus at rank 2, 1 person out performed him</p>
+<h3 id="dense-rank">Dense Rank</h3>
+<p>Dense rank does not leave gaps in between because someone tied above you. It is not as ruthless as <em>Rank</em></p>
+<p>Suppose I am giving bonus to <em>TOP 3</em> performers. Using row number means injustice to Menalaus, Adam and Kate. Using rank means injustice to Kate. Enter Dense rank and it fixes everything</p>
+<h2 id="catch-the-duplicates">Catch the duplicates</h2>
+<p>So, now you know how and where to use ranking in SQL</p>
+<p>More commonly we see row number in our code. It's most commonly used to remove duplicates in Data Engineering. Imagine you are tracking the log-ins and log-outs of employees. You want to see if there are any duplicates in the table (it shouldn't. Otherwise you are wasting your storage for nothing). To keep it simple, lets say there is only 1 employee</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Action</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>In</td>
+<td>10:01</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>12:07</td>
+</tr>
+<tr>
+<td>101</td>
+<td>In</td>
+<td>12:49</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>17:57</td>
+</tr>
+<tr>
+<td>101</td>
+<td>In</td>
+<td>18:09</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+</tr>
+</tbody>
+</table>
+<p>Now, its acceptable for a person to log out and log back in for some left over task. But the last 3 entries are <em>true duplicates</em>. To automatically find such entries we can run the query</p>
+<pre><code class="language-SQL">SELECT
+    *,
+    ROW_NUMBER() OVER (ORDER BY Time Desc) as RowNum
+FROM
+    logs_tbl
+WHERE
+    Action = 'Out';
+</code></pre>
+<blockquote>
+<p>Its a bit unfair we knew before hand that the duplicates are in <code>Action = 'Out'</code>. But bear with me ...</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Action</th>
+<th>Time</th>
+<th>RowNum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+<td>1</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+<td>2</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+<td>3</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>17:57</td>
+<td>4</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>12:07</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>And for the magic🪄, we add <code>PARTITION BY</code>. Partition... well makes partitions based on a criteria. Here we want to create a partition/compartment of particular times</p>
+<pre><code class="language-SQL">SELECT
+    *,
+    ROW_NUMBER() OVER (
+        PARTITION BY Time
+        ORDER BY Time Desc
+    ) as RowNum
+FROM
+    logs_tbl
+WHERE
+    Action = 'Out';
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Action</th>
+<th>Time</th>
+<th>RowNum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+<td>1</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+<td>2</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>18:32</td>
+<td>3</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>17:57</td>
+<td>1</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Out</td>
+<td>12:07</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Hence, if we find any row number &gt; 1, it means that the table has duplicates. As for the reason why I chose <code>Action = 'Out'</code> (even though in this case it makes no difference), is to ensure I don't catch cases where the person logs in and logs out within the minute. In that case, the system would have noted down the same time for both log in and log out, and this would have shown up as duplicate</p>
+<h2 id="the-partitioning">The Partitioning</h2>
+<p>Since, you already learnt partitioning above, it does not require another introduction. Remember the very first table, with all the crazy team names. Imagine, you want the best performer from each team to be made the captain🤠 or something... In this case we can use partition on the team name</p>
+<pre><code class="language-sql">SELECT
+    Id,
+    Name,
+    Revenue,
+    ROW_NUMBER() OVER (
+        PARTITION BY Team
+        ORDER BY Revenue Desc
+    ) as RowNum
+FROM
+    salesData_tbl;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Id</th>
+<th style="text-align: center;">Team</th>
+<th style="text-align: right;">Name</th>
+<th style="text-align: left;">Revenue</th>
+<th style="text-align: center;">RowNum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Jacob</td>
+<td style="text-align: left;">9327</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">Angel's Wings</td>
+<td style="text-align: right;">Abraham</td>
+<td style="text-align: left;">6005</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">103</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Helena</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">106</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Mary</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">Devil's Cry</td>
+<td style="text-align: right;">Jenny</td>
+<td style="text-align: left;">6000</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">Menalaus</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">Boosters</td>
+<td style="text-align: right;">John</td>
+<td style="text-align: left;">5611</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Adam</td>
+<td style="text-align: left;">8461</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">104</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Kate</td>
+<td style="text-align: left;">8180</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">109</td>
+<td style="text-align: center;">Redemption</td>
+<td style="text-align: right;">Noah</td>
+<td style="text-align: left;">7483</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<p>So, in Devil's Cry, even though Helena and Mary were tied, Helena got the captaincy🤠</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

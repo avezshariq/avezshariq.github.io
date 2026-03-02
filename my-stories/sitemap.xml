@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://avezshariq.github.io/my-stories/</loc>
-         <lastmod>2026-03-01</lastmod>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
-         <loc>https://avezshariq.github.io/my-stories/2026_02_26/</loc>
-         <lastmod>2026-03-01</lastmod>
+         <loc>https://avezshariq.github.io/my-stories/Python/2026_02_26/</loc>
+         <lastmod>2026-03-02</lastmod>
     </url>
     <url>
-         <loc>https://avezshariq.github.io/my-stories/2026_02_28/</loc>
-         <lastmod>2026-03-01</lastmod>
+         <loc>https://avezshariq.github.io/my-stories/Python/2026_02_28/</loc>
+         <lastmod>2026-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://avezshariq.github.io/my-stories/SQL/2026_03_07/</loc>
+         <lastmod>2026-03-02</lastmod>
     </url>
 </urlset>
