@@ -1,4 +1,4 @@
-# Copying in Python (WIP)
+# Copying in Python
 
 ## Motivation 💪🏻
 Lets say, we are creating a list of ingredients for 🍋lemon tea and 🫚ginger tea. Trust me, the ☕tea  and this example are both effective. Since both of them have common ingredients we proceed in this way:

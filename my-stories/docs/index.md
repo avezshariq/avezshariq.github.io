@@ -1,4 +1,4 @@
-# My Stories (Blog Home)
+# Blog Home
 
 Welcome! This is where code meets craft. While many developers stop at the "*how*"🤔, I'm obsessed with the "**why**"🥺 — and I've found that the best way to explain complex systems is to... well... show them💻
 
