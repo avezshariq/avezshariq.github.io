@@ -42,6 +42,10 @@ thead {
     color: black;
 }
 
+table {
+    width: fit-content;
+}
+
 td {
     background-color: rgba(255, 255, 255, 0.1);
 }
