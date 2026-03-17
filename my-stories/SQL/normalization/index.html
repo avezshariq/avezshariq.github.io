@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Normalization - My Stories</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://avezshariq.github.io/my-stories/SQL/normalization/">
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/styles/extra.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/styles/favicon.svg">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../assets/styles/favicon.svg" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">My Stories</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Blog Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#python-collapse" aria-expanded="false">
+                    Python
+                </a>
+                <div class="collapse" id="python-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Python/2026_02_28/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tuples are lighter than a list
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Python/2026_03_14/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Numbers in Python
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#sql-collapse" aria-expanded="false">
+                    SQL
+                </a>
+                <div class="collapse" id="sql-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../2026_03_07/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ranking in SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Normalization
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../2026_03_07/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a 
+                        class="btn-preview drac-btn drac-text-white--hover disabled" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="normalization">Normalization</h1>
+<h2 id="motivation">Motivation 💪🏻</h2>
+<p>Imagine you are starting out with an e-commerce website. You design the pages, get your items, enlist them in your website and make it live🌐. Now, when the orders come, you have to store in a table. So, make a table with the name <em>myBigTableThatHasAllTheData</em>😁 and start writing data. This is not a good practice for several reasons. Lets break down each one of them ...</p>
+<p>Let's say we maintain a food court. I am gonna trivialize the details for easy understanding. Let's consider the orders:</p>
+<h3 id="flat-way">Flat way</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Customer Name</th>
+<th style="text-align: center;">Item Name</th>
+<th style="text-align: center;">Store Name</th>
+<th style="text-align: center;">Total Order Price</th>
+<th style="text-align: center;">Purchase Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Hungry Man1</td>
+<td style="text-align: center;">Pizza</td>
+<td style="text-align: center;">Pizza in 5</td>
+<td style="text-align: center;">608.03</td>
+<td style="text-align: center;">2026-01-05 19:47:08</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hungry Man1</td>
+<td style="text-align: center;">Burger</td>
+<td style="text-align: center;">Burg Me In</td>
+<td style="text-align: center;">203.87</td>
+<td style="text-align: center;">2026-01-05 19:47:08</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hungry Man2</td>
+<td style="text-align: center;">Pizza</td>
+<td style="text-align: center;">Pizza in 5</td>
+<td style="text-align: center;">196.27</td>
+<td style="text-align: center;">2026-01-07 11:15:18</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hungry Man2</td>
+<td style="text-align: center;">Ice Cream</td>
+<td style="text-align: center;">Dreamy Creamy</td>
+<td style="text-align: center;">85.79</td>
+<td style="text-align: center;">2026-01-07 13:27:49</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hungry Man1</td>
+<td style="text-align: center;">Ice Cream</td>
+<td style="text-align: center;">Dreamy Creamy</td>
+<td style="text-align: center;">401.43</td>
+<td style="text-align: center;">2026-01-07 22:35:28</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hungry Man1</td>
+<td style="text-align: center;">Burger</td>
+<td style="text-align: center;">Burg Me In</td>
+<td style="text-align: center;">1247.22</td>
+<td style="text-align: center;">2026-01-08 22:35:28</td>
+</tr>
+</tbody>
+</table>
+<h3 id="normalized-way">Normalized way🤘🏻</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">CustId</th>
+<th style="text-align: center;">Customer Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">H01</td>
+<td style="text-align: center;">Hungry Man1</td>
+</tr>
+<tr>
+<td style="text-align: center;">H02</td>
+<td style="text-align: center;">Hungry Man2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ItemId</th>
+<th style="text-align: center;">Item Name</th>
+<th style="text-align: center;">Store Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">It01</td>
+<td style="text-align: center;">Pizza</td>
+<td style="text-align: center;">Pizza in 5</td>
+</tr>
+<tr>
+<td style="text-align: center;">It02</td>
+<td style="text-align: center;">Burger</td>
+<td style="text-align: center;">Burg Me In</td>
+</tr>
+<tr>
+<td style="text-align: center;">It03</td>
+<td style="text-align: center;">Ice Cream</td>
+<td style="text-align: center;">Dreamy Creamy</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">OrderId</th>
+<th style="text-align: center;">CustId</th>
+<th style="text-align: center;">ItemId</th>
+<th style="text-align: center;">TotalPrice</th>
+<th style="text-align: center;">Purchase Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">H01</td>
+<td style="text-align: center;">It01</td>
+<td style="text-align: center;">608.03</td>
+<td style="text-align: center;">2026-01-05 19:47:08</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">H01</td>
+<td style="text-align: center;">It02</td>
+<td style="text-align: center;">203.87</td>
+<td style="text-align: center;">2026-01-05 19:47:08</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">H02</td>
+<td style="text-align: center;">It02</td>
+<td style="text-align: center;">196.27</td>
+<td style="text-align: center;">2026-01-07 11:15:18</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">H02</td>
+<td style="text-align: center;">It03</td>
+<td style="text-align: center;">85.79</td>
+<td style="text-align: center;">2026-01-07 13:27:49</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">H01</td>
+<td style="text-align: center;">It03</td>
+<td style="text-align: center;">401.43</td>
+<td style="text-align: center;">2026-01-07 22:35:28</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">H01</td>
+<td style="text-align: center;">It02</td>
+<td style="text-align: center;">1247.22</td>
+<td style="text-align: center;">2026-01-08 22:35:28</td>
+</tr>
+</tbody>
+</table>
+<p>This is the normalized way, where we have all the complicated <em>Ids</em> referring to other tables. Why go through the pain🤕 of all this ...</p>
+<h2 id="redundancy">Redundancy</h2>
+<p>Count the number of characters consumed to store data the flat way. Lets assume any character (a number or an alphabet or anything else for that matter) consumes 1 byte of storage. Count the total number...</p>
+<p>Take your time🕛... but it will be ~266 bytes and for the normalized way it comes to ~246 bytes. It does not look impressive, but this saving becomes more pronounced when there are huge number of rows</p>
+<h2 id="updates">Updates</h2>
+<p>Lets say, we need to change the name of that Pizza place from <em>Pizza in 5</em> to <em>Pizza5</em>. We can run an update query on the flat way, which would update it at 2 places. Currently it is 2 for a small table, but as the data grows this number would also grow</p>
+<p>But in the normalized way, it would update in exactly 1 row in the Store table. So, its faster⏩ and safer</p>
+<h2 id="deletion-anomaly">Deletion anomaly</h2>
+<p>Lets say you delete the records for <em>Hungry Man2</em> from the flat table. Then there would be no indication from the Database that he ever existed</p>
+<p>Lets say you delete that entry from the Orders table, his identity would still exist in the <em>Customer table</em>. </p>
+<p>This is useful in other ways too. Imagine a scenario where we are storing the shipping🚢 address in the flat table. If the Hungry Man's order is deleted, so is his address. Next time, he orders something, he needs to enter his address again. But in the normalized way, since the details are stored in another place, the info is safe🔒. This not only applies to address, but any personal info like credit card💳 info, preference on website etc...</p>
+<h2 id="foreign-key-relationships">Foreign key relationships</h2>
+<p>Foreign key relationships are an important part of Relationship DataBase Management Systems (RDBMS). It prevents orphan records</p>
+<p>Lets say, we are blocking🫥 Hungry Man1 from our system. He might have ordered too many burgers🍔 from our website. Or he might just be a test user🧑🏻‍💻, and we want to delete these records before going live (Now, you might be thinking, we delete all records before going live, but... lets say we created this user to test a coupon🎟️ or a new feature or to fix a bug🐞 ...). In either case, if we delete the record from Customer table, the records from Orders table will automatically get deleted. This is called cascading effect, and the database automatically handles that. In fact, this feature is so well integrated that we can set the database to either cascade, insert <em>NULL</em>, or some default value, or raise error because some other table depends in this table</p>
+<h2 id="website-design">Website design</h2>
+<p>Lets say you are listing items from your DB on to the website. It is sufficient to expose only the <em>Store table</em> as it helps populate the items in the website. The other 2 tables can be kept safely away and we can expose info from it only when needed (like when user is logged in and connection is secure🔐, or for ADMIN🥷🏻 panel etc ...). This decreases the attack surface🤺</p>
+<h2 id="disadvantages">Disadvantages</h2>
+<p>Normalized way, is the way. Loud and clear. But like all things in this world, this way has its disadvantages</p>
+<h3 id="dont-normalize-everything">Don't normalize everything</h3>
+<p>Here, in the above example, suppose the store table was once again normalized</p>
+<h4 id="store-flat-way">Store Flat way</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ItemId</th>
+<th style="text-align: center;">Item Name</th>
+<th style="text-align: center;">Store Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">It01</td>
+<td style="text-align: center;">Pizza</td>
+<td style="text-align: center;">Pizza in 5</td>
+</tr>
+<tr>
+<td style="text-align: center;">It02</td>
+<td style="text-align: center;">Burger</td>
+<td style="text-align: center;">Burg Me In</td>
+</tr>
+<tr>
+<td style="text-align: center;">It03</td>
+<td style="text-align: center;">Ice Cream</td>
+<td style="text-align: center;">Dreamy Creamy</td>
+</tr>
+</tbody>
+</table>
+<h4 id="store-normalized-way">Store Normalized way</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ItemId</th>
+<th style="text-align: center;">Item Name</th>
+<th style="text-align: center;">Store Id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">It01</td>
+<td style="text-align: center;">Pizza</td>
+<td style="text-align: center;">S01</td>
+</tr>
+<tr>
+<td style="text-align: center;">It02</td>
+<td style="text-align: center;">Burger</td>
+<td style="text-align: center;">S02</td>
+</tr>
+<tr>
+<td style="text-align: center;">It03</td>
+<td style="text-align: center;">Ice Cream</td>
+<td style="text-align: center;">S03</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Storeid</th>
+<th style="text-align: center;">Store Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">S01</td>
+<td style="text-align: center;">Pizza In 5</td>
+</tr>
+<tr>
+<td style="text-align: center;">S02</td>
+<td style="text-align: center;">Burg Me In</td>
+</tr>
+<tr>
+<td style="text-align: center;">S03</td>
+<td style="text-align: center;">Dreamy Creamy</td>
+</tr>
+</tbody>
+</table>
+<p>We can observe that it did not yield us a good benefit. In fact it made it worse. Now we just added a bunch of Ids that occupy more space than the flat version. So, we must be aware how much and how many tables need normalization</p>
+<h3 id="difficult-to-remember-the-joins">Difficult to remember the JOINs</h3>
+<p>Generally speaking, there are many tables in the system. And to acquire the necessary information, the analyst must remember which tables to <em>JOIN</em> and on what keys🔑. If the tables are heavily normalized, then number of JOINs increases accordingly</p>
+<p>That is the reason why, during analysis, data is not stored in normalized way. Otherwise, even for simple data to make sense, we need to JOIN many tables</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
