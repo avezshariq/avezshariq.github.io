@@ -2,13 +2,13 @@
 <html lang="en" data-bs-theme="dark">
 
 <head>
-        <title>Numbers in Python - My Stories</title>
+        <title>Dictionary Mapping🗺️ - My Stories</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://avezshariq.github.io/my-stories/Python/2026_03_14/">
+        <link rel="canonical" href="https://avezshariq.github.io/my-stories/Python/2026_03_29/">
         
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -94,16 +94,16 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./"
-            class=" active 
+        <a href="../2026_03_14/"
+            class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Numbers in Python
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../2026_03_29/"
-            class="
+        <a href="./"
+            class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Dictionary Mapping🗺️
         </a>
@@ -167,13 +167,13 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../2026_02_28/"
+                    <a href="../2026_03_14/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../2026_03_29/"
+                    <a href="../../SQL/2026_03_07/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -210,67 +210,99 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="numbers-in-python">Numbers in Python</h1>
-<p>When I was writing this article, I thought to myself🤔, would anyone be interested in it at all. Its just numbers🔢. I mean, how hard can it be. But then I realized, these few enhancements that we talk about exist in the real world for a reason. So, no matter how small a audience might benefit from it, it is still a benefit🫱🏻‍🫲🏼. And I am gonna go ahead with it. With that guilt out of the way, let's get started</p>
-<p>This is gonna be one of those short and sweet articles</p>
-<h2 id="the-standard-way">The standard way</h2>
-<p>Of course, we have the standard way of writing numbers</p>
-<pre><code class="language-python">a = 42 # Positive integer
-b = -7 # Negative integer
-c = 1.57 # Positive float
-d = -21.6 # Negative float
-e = 3+5j # Complex number
+        <p><h1 id="dictionary-mapping">Dictionary Mapping🗺️</h1>
+<h2 id="the-if-elif-elif-elif-chain">The if-elif-elif-elif💥.... chain⛓️</h2>
+<p>Imagine we were writing code to see the date in a particular format for different countries. So, the starter code looks like this:</p>
+<pre><code class="language-python">from datetime import datetime
+today = datetime.now()
+cc = input(&quot;Enter your country code: &quot;)
+
+if cc == &quot;US&quot;: # USA
+    print(today.strftime(&quot;%m-%d-%y&quot;))
+elif cc == &quot;UK&quot;: # UK
+    print(today.strftime(&quot;%d-%m-%y&quot;))
+elif cc == &quot;IN&quot;: # India
+    print(today.strftime(&quot;%d-%m-%y&quot;))
+else:
+    print(&quot;No country selected&quot;)
+</code></pre>
+<p>This looks relatively harmless, but imagine I want to include all the countries in the world🌏 here. The code becomes unreadable. So, enter dictionary mapping</p>
+<h2 id="dictionary-mapping_1">Dictionary mapping</h2>
+<pre><code class="language-python">from datetime import datetime
+today = datetime.now()
+cc = input(&quot;Enter your country code: &quot;)
+
+# Define functions for each country
+def us():
+    return today.strftime(&quot;%m-%d-%y&quot;)
+
+def uk():
+    return today.strftime(&quot;%d-%m-%y&quot;)
+
+def india():
+    return today.strftime(&quot;%d-%m-%y&quot;)
+
+def default():
+    return &quot;No country selected&quot;
+
+# Create dictionary mapping for each country
+countries = {
+    &quot;us&quot;: us,
+    &quot;uk&quot;: uk,
+    &quot;in&quot;: india,
+}
+
+print(countries.get(cc, default)())
+</code></pre>
+<h3 id="dictionary-mapping-advantages">Dictionary mapping advantages</h3>
+<p>This code is better (even if it is longer) because of 2 reasons</p>
+<ol>
+<li>Each country has its own function. So, the work is distributable to a large team🧑🏻‍🤝‍🧑🏻 (Ex: each person🙍🏻 in the team has to write 10 functions). Its not distributable in the <em>if-elif-else</em> style</li>
+<li>
+<p>Dictionary mapping is faster⚡. We expect the code block to be huge. There are 195 countries in the world (not counting all the countries created in Minecraft and Age of Empires)</p>
+<p>In a <em>if-elif-else</em> style code, the code takes longer to reach the last <em>elif</em> condition because it has to check the conditions of all the <em>elif</em>s sitting on top of it. But dictionary rely on a concept called <strong>hashing</strong>, which makes search must faster (hashing also used in sets)</p>
+</li>
+</ol>
+<h2 id="enter-lambda">Enter LAMBDA</h2>
+<p>Here comes the application of <strong>Lambda</strong>. Since each function is only a single line, we can write the functions like this</p>
+<pre><code class="language-python"># Before
+def us():
+    return today.strftime(&quot;%m-%d-%y&quot;)
+def uk():
+    return today.strftime(&quot;%d-%m-%y&quot;)
+def india():
+    return today.strftime(&quot;%d-%m-%y&quot;)
+def default():
+    return &quot;No country selected&quot;
+
+# After
+us = lambda: today.strftime(&quot;%m-%d-%y&quot;)
+uk = lambda: today.strftime(&quot;%d-%m-%y&quot;)
+india = lambda: today.strftime(&quot;%d-%m-%y&quot;)
+default = lambda: &quot;No country selected&quot;
+</code></pre>
+<p>While <em>lambda</em> can be used as an anonymous🥸 function, it can be use with a name as well</p>
+<p>As said, it is an anonymous🥸 function. So, why create separate functions with names. We could simply give in dictionary mapping. So, the final code becomes:</p>
+<pre><code class="language-python">from datetime import datetime
+today = datetime.now()
+cc = input(&quot;Enter your country code: &quot;)
+
+# Create default function
+default = lambda: &quot;No country selected&quot;
+
+# Create dictionary mapping for each country
+countries = {
+    &quot;us&quot;: lambda: today.strftime(&quot;%m-%d-%y&quot;),
+    &quot;uk&quot;: lambda: today.strftime(&quot;%d-%m-%y&quot;),
+    &quot;in&quot;: lambda: today.strftime(&quot;%d-%m-%y&quot;),
+}
+
+print(countries.get(cc, default)())
 </code></pre>
 <blockquote>
-<p>Note that the imaginary number <code>i</code> is called <code>j</code> in Python</p>
+<p>Note: Here the complexity of code maintenance is back i.e., if it were as individual functions it would have been easier to develop by individual contributors. So, we can choose not to do this step. But the performance boost remains because we are still using dictionary mapping</p>
 </blockquote>
-<p>This can easily be proved</p>
-<pre><code class="language-python">a = 3+5j
-b = 3-5j
-c = a*b
-print(c)
-</code></pre>
-<pre><code># Output
-(34+0j) # Basically meaning 34
-</code></pre>
-<blockquote>
-<p>Fun fact😜: While <code>j</code> is used to show imaginary component, it can still be used as a variable name. So, <code>j=3+4j</code> or for that matter <code>j=5j</code> is valid in python (Although mathematically it looks so wrong)</p>
-</blockquote>
-<h2 id="big-numbers">Big numbers</h2>
-<p>If we have to represent big numbers... well... we just type⌨️ it out...
-But it soon gets difficult to check if there was a typo in it. For example <code>a = 1000000000</code>. What is a? You are forced to count the number of zeros making the appearance of a baboon🐵. This can be solved in python in 2 ways</p>
-<h3 id="scientific-notation">Scientific notation</h3>
-<p>Generally big numbers or tiny numbers occur in science🔭. What better way to represent them than scientific notation. The <code>x10^{}</code> is replaced with <code>e</code></p>
-<pre><code class="language-python">a = 1e4 # 10000
-b = -3e7 # -30000000
-c = 5.284e-8 # 0.00000005284
-</code></pre>
-<h3 id="underscores">Underscores</h3>
-<p>For those of us who are not good at science (basically regular normal people), adding an underscore <code>_</code> makes a clear distinction to count the numbers. You know how Python loves snake🐍 case right. Hence the underscore. So don't undermine the underscore</p>
-<pre><code class="language-python">a = 10_000
-b = -30_000
-</code></pre>
-<p>Python completely ignores the underscore. Which means we don't have to follow any numeric system to put them like <code>a = 1_00_000</code> (read 1 Lakh in Indian) and <code>a = 100_000</code> (read hundred thousand in English) are the same</p>
-<p>This also means that its easier to store credit card numbers, bank receipt numbers, Social Security numbers etc..</p>
-<pre><code class="language-python">a = 7692_1247_3714
-b = 96_2144_4144
-</code></pre>
-<p>But wait a minute, what about outputs?</p>
-<pre><code class="language-python">a = int(input(&quot;Enter a big number: &quot; ))
-print(a)
-</code></pre>
-<p>Run the code and type <code>10_000</code>. The output is still <code>10000</code>. So, the baboon🐒 doesn't leave us after all. Not quite!
-This can be done with and without <em>f-strings</em>. I am gonna show it with f-strings, because its the modern way</p>
-<pre><code class="language-python">a = int(input(&quot;Enter a big number: &quot; ))
-print(f&quot;{a}&quot;) # Reference f-string syntax
-print(f&quot;{a:_}&quot;) # f-string syntax with underscore thingies
-print(f&quot;{a:,}&quot;) # f-string syntax with comma thingies
-</code></pre>
-<blockquote>
-<p>Note that even if during the input we give underscores for every 4 digits (like <code>1234_5678_1234</code>), python strips them off and stores them as proper integers. When its time to print it, it puts the underscores for every 3 digits by default (like <code>123_456_781_234</code>)</p>
-</blockquote>
-<h2 id="conclusion">Conclusion</h2>
-<p>So, there you have it. We can represent numbers🔢 in different ways in python</p></p>
+<p>So, that was how lambda + dictionary mapping is used to write optimized code. What other optimizations have you written😉</p></p>
     </article>
 </section>
             <!-- endblock -->
